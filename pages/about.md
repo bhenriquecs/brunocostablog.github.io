@@ -9,9 +9,4 @@ permalink: /about/
 
 # About
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Graduado em análise e desenvolvimento de sistemas, com experiência em infraestrutura, sysadmim, devops e desenvolvimento. Atuação em projetos que envolvem tecnologia e coordenação de equipes.Este blog tem como foco compartilhar conhecimento para quem o encontre em suas pesquisas. Aqui terão posts sobre sistemas, desenvolvimento, infraestrutura, devops e demais assuntos relacionados a Tecnologia da Informação aos quais tive, tenho e terei contato ao longo da minha jornada. Se você está lendo isto, espero que lhe seja útil!
