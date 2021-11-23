@@ -41,7 +41,7 @@ Baixe e instale também o Visual C ++ Redistributable para Visual Studio 2015-20
 
 Descompacte o apache baixado na raiz do seu disco (geralmente C:\). Você terá algo como C:\Apache24\ .  
 Abra o CMD (Prompt de comando) e vá até o diretório ***C:\Apache24\bin*** .
-Execute:
+Execute:  
 ```
 httpd.exe
 ```
@@ -50,13 +50,13 @@ O firewall do Windows pode pedir permissão para o Apache se comunique em espec�
 O Apache já está instalado. Para conferir abra um navegador e acesse ***http://localhost***. Se aparecer a página com os dizeres ***"It Works!"*** significa que o Apache está funcionando corretamente.  
 Caso receba algum aviso sobre "não poder determinar o nome do domínio totalmente qualificado", faça o seguinte:
 * Com um editor de texto, abra o arquivo httpd.conf, existente no diretório C:\Apache24\conf
-* Encontre ***ServerName <yourhostname>***. Descomente e altere ***<yourhostname>*** por ***<localhost>*** ou pelo ***<nome do host>*** do sistema
+* Encontre `ServerName <yourhostname>`. Descomente e altere `<yourhostname>` por `<localhost>` ou pelo `<nome do host>` do sistema
 * Salve o arquivo
 
 Para executar o Apache automaticamente sempre que o sistema for iniciado, sem a necessidade de fazer login ou executar o serviço manualmente, vamos transformá-lo em um serviço do Windows.
 * Abra o CMD como administrador (caso tenha o fechado)
 * Vá até o diretório C:\Apache24\bin
-* Dê o comando:
+* Dê o comando:  
 ```
 httpd.exe -k install
 ```
