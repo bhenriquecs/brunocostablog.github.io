@@ -1,5 +1,5 @@
 ---
-date: 2019-05-16T23:48:05.000Z
+date: 2021-12-31T13:48:05.000Z
 layout: post
 title: Apache + PHP + MySQL no Windows
 subtitle: 'Como montar um servidor web com Apache com suporte ao PHP e MySQL sem usar pacotes prontos como o WAMP e XAMP?'
