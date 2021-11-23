@@ -6,12 +6,13 @@ subtitle: 'Como montar um servidor web com Apache com suporte ao PHP e MySQL sem
 description: >-
   Como montar um servidor web com Apache com suporte ao PHP e MySQL sem usar pacotes prontos como o WAMP e XAMP?
 image: >-
-  https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559821647/theme6_qeeojf.jpg
+  https://res.cloudinary.com/k4bv734/image/upload/v1637696792/blog/apache_aqldc8.jpg
 optimized_image: >-
-  https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559821647/theme6_qeeojf.jpg
-category: blog
+  https://res.cloudinary.com/k4bv734/image/upload/v1637696792/blog/apache_optimized_a0make.jpg
+category: servidores
 tags:
   - webserver
+  - servidorweb
   - apache
   - mysql
   - PHP
