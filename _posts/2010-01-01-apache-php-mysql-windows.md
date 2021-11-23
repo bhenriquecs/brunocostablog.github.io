@@ -20,10 +20,13 @@ author: brunocosta
 paginate: true
 ---
 Aqui iremos tratar somente as instalações e configurações iniciais para funcionamento padrão, não entraremos nas demais configurações que cada ferramenta possui.
+
 Antes de tudo, recomendo a leitura das documentações oficiais de cada ferramenta/solução:
 
 > Apache: <a href="http://httpd.apache.org/docs/current/platform/windows.html">http://httpd.apache.org/docs/current/platform/windows.html</a>
+
 > PHP: <a href="https://www.php.net/manual/en/index.php">https://www.php.net/manual/en/index.php</a>
+
 > MySQL: <a href="https://dev.mysql.com/doc">https://dev.mysql.com/doc</a>
 
 ## Apache
