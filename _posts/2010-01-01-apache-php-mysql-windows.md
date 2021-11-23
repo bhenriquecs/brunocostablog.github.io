@@ -22,13 +22,50 @@ paginate: true
 Aqui iremos tratar somente as instalações e configurações iniciais para funcionamento padrão, não entraremos nas demais configurações que cada ferramenta possui.
 Antes de tudo, recomendo a leitura das documentações oficiais de cada ferramenta/solução:
 
-> Apache: http://httpd.apache.org/docs/current/platform/windows.html
-> PHP: https://www.php.net/manual/en/index.php
-> MySQL: https://dev.mysql.com/doc
+> Apache: <a href="http://httpd.apache.org/docs/current/platform/windows.html">http://httpd.apache.org/docs/current/platform/windows.html</a>
+> PHP: <a href="https://www.php.net/manual/en/index.php">https://www.php.net/manual/en/index.php</a>
+> MySQL: <a href="https://dev.mysql.com/doc">https://dev.mysql.com/doc</a>
 
-Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+## Apache
 
-## Inline HTML elements
+O Apache não fornece binários para Windows, porém existem várias opções de terceiros disponíveis para download, como por exemplo o Apache Lounge e Apache Haus.
+Baixe a versão correta para o seu sistema operacional, x86 (32 bits) ou x64 (64 bits):
+
+> 32 bits: <a href="https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.46-win32-VS16.zip">https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.46-win32-VS16.zip</a>
+> 64 bits: <a href="https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.46-win64-VS16.zip">https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.46-win64-VS16.zip</a>
+
+Baixe e instale também o Visual C ++ Redistributable para Visual Studio 2015-2019, caso seu sistema não o tenha. Também escolha a versão apropriada.
+
+> 32 bits: <a href="https://aka.ms/vs/16/release/VC_redist.x86.exe">https://aka.ms/vs/16/release/VC_redist.x86.exe</a>
+> 64 bits: <a href="https://aka.ms/vs/16/release/VC_redist.x64.exe">https://aka.ms/vs/16/release/VC_redist.x64.exe</a>
+
+Descompacte o apache baixado na raiz do seu disco (geralmente C:\). Você terá algo como C:\Apache24\ .
+Abra o CMD e vá até o diretório C:\Apache24\bin .
+Execute:
+```js
+httpd.exe
+```
+
+O firewall do Windows pode pedir permissão para o Apache se comunique em específicas redes. Sugiro aceitar em redes domésticas e corporativas e não permitir em redes públicas.
+O Apache já está instalado. Para conferir abra um navegador e acesse http://localhost. Se aparecer a página com os dizeres "It Works!" significa que o Apache está funcionando corretamente.
+Caso receba algum aviso sobre "não poder determinar o nome do domínio totalmente qualificado", faça o seguinte:
+* Com um editor de texto, abra o arquivo httpd.conf, existente no diretório C:\Apache24\conf
+* Encontre ServerName <yourhostname>. Descomente e altere <yourhostname> por <localhost> ou pelo <nome do host> do sistema
+* Salve o arquivo
+
+Para executar o Apache automaticamente sempre que o sistema for iniciado, sem a necessidade de fazer login ou executar o serviço manualmente, vamos transformá-lo em um serviço do Windows.
+* Abra o CMD como administrador (caso tenha o fechado)
+* Vá até o diretório C:\Apache24\bin
+* Dê o comando:
+```js
+httpd.exe -k install
+```
+
+Pronto! Agora você tem o Apache instalado como serviço do Windows o qual poderá gerenciar no Serviços (services.msc).
+
+## PHP
+
+
 
 HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
