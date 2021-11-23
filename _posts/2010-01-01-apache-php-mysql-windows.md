@@ -39,7 +39,7 @@ Baixe e instale também o Visual C ++ Redistributable para Visual Studio 2015-20
 > 32 bits: <a href="https://aka.ms/vs/16/release/VC_redist.x86.exe">https://aka.ms/vs/16/release/VC_redist.x86.exe</a>  
 > 64 bits: <a href="https://aka.ms/vs/16/release/VC_redist.x64.exe">https://aka.ms/vs/16/release/VC_redist.x64.exe</a>
 
-Descompacte o apache baixado na raiz do seu disco (geralmente C:\). Você terá algo como C:\Apache24\ .  
+Descompacte o apache baixado na raiz do seu disco (geralmente C:\). Você terá algo como ***C:\Apache24*** .  
 Abra o CMD (Prompt de comando) e vá até o diretório ***C:\Apache24\bin*** .
 Execute:  
 ```
@@ -49,13 +49,13 @@ httpd.exe
 O firewall do Windows pode pedir permissão para o Apache se comunique em específicas redes. Sugiro aceitar em redes domésticas e corporativas e não permitir em redes públicas.  
 O Apache já está instalado. Para conferir abra um navegador e acesse ***http://localhost***. Se aparecer a página com os dizeres ***"It Works!"*** significa que o Apache está funcionando corretamente.  
 Caso receba algum aviso sobre "não poder determinar o nome do domínio totalmente qualificado", faça o seguinte:
-* Com um editor de texto, abra o arquivo httpd.conf, existente no diretório C:\Apache24\conf
+* Com um editor de texto, abra o arquivo httpd.conf, existente no diretório ***C:\Apache24\conf***
 * Encontre `ServerName <yourhostname>`. Descomente e altere `<yourhostname>` por `<localhost>` ou pelo `<nome do host>` do sistema
 * Salve o arquivo
 
 Para executar o Apache automaticamente sempre que o sistema for iniciado, sem a necessidade de fazer login ou executar o serviço manualmente, vamos transformá-lo em um serviço do Windows.
 * Abra o CMD como administrador (caso tenha o fechado)
-* Vá até o diretório C:\Apache24\bin
+* Vá até o diretório ***C:\Apache24\bin***
 * Dê o comando:  
 ```
 httpd.exe -k install
@@ -65,108 +65,68 @@ Pronto! Agora você tem o Apache instalado como serviço do Windows o qual poder
 
 ## PHP
 
+Baixe o PHP versão TS (Thread Safe) correspondente ao seu sistema (x86 ou x64), na [página oficial](https://windows.php.net/download/) de download do PHP para Windows. Sugiro a versão mais recente disponível, porém fica a critério dos seus requisitos.  
 
+Crie uma pasta nomeada como "php" na raiz do seu disco ***C:\php***.  
+Extraia o arquivo baixado anteriormente nesta pasta.  
 
-HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+Acesse o diretório ***C:\php*** e renomeie o ***php.ini-production*** ou ***php.ini-development*** (somente um desses) para ***php.ini***, levando em consideração se está instalando para produção ou em ambiente de desenvolvimento/testes.  
 
-* **To bold text**, use `<strong>`.
-* *To italicize text*, use `<em>`.
-* Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
-* Citations, like <cite>&mdash; Thiago Rossener</cite>, should use `<cite>`.
-* <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
-* Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
+Abra esse ***php.ini*** com um editor de textos (recomendo o Notepad++) e pesquise por ***extension_dir = "ext"***. Será necessário desmarcar essa linha como comentário, para isso remova o ***;*** (ponto e vírgula) que inicia a sentença. Isso é pra definir o diretório padrão de extensões para ***C:\php\ext***.  
 
-Most of these elements are styled by browsers with few modifications on our part.
+Agora vamos configurar o Apache para usar esse PHP. Primeiro vamos parar o serviço do Apache. Abra o ***Serviços do Windows*** (win + R e digite ***services.msc***), encontre o serviço do Apache e clique em Parar.  
 
-# Heading 1
+Abra o arquivo ***httpd.conf***, existente no diretório ***C:\Apache24\conf*** com um editor de texto e adicione o seguinte:  
 
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
---page-break--
-
-## Code
-
-Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
-
-```js
-// Example can be run directly in your JavaScript console
-
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
-
-// Call the function
-adder(2, 6);
-// > 8
+Para o PHP 7
+```
+LoadModule php7_module "c:\php\php7apache2_4.dll"
+  <IfModule php7_module>
+    AddHandler application/x-httpd-php .php
+    AddType application/x-httpd-php .php .html
+    PHPIniDir "c:\php"
+  </IfModule>
 ```
 
-Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+Para o PHP 5
+```
+LoadModule php5_module C:/PHP/php5apache2_4.dll
+  <IfModule php5_module>
+    DirectoryIndex index.html index.php
+    AddHandler application/x-httpd-php .php
+    PHPIniDir "C:/PHP"
+  </IfModule>
+```
 
-## Lists
+Agora execute o Apache manualmente utilizando o CMD.
+* Abra o CMD como administrador  
+* Vá até o diretório ***C:\Apache24\bin***  
+* Execute: 
+```
+httpd.exe
+```
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+Se não houver erros quer dizer que ocorreu tudo bem com sua configuração e você poderá testar o PHP.  
+Crie um arquivo nomeado como phpinfo.php
+* Digite `<?php phpinfo();?>` no arquivo
+* Salve no diretório ***C:\Apache24\htdocs***
+* Abra o navegador e acesse [localhost/phpinfo.php](http://localhost/phpinfo.php)
+* Se tudo tiver certo, você verá uma página com algumas informações do seu sistema. Caso retorne alguma algo como ***"Erro interno do servidor"***, significa que algo está errado. Verifique as configurações feitas até aqui.
 
-* Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-* Donec id elit non mi porta gravida at eget metus.
-* Nulla vitae elit libero, a pharetra augue.
+Se seguiu exatamente como neste tutorial, o CMD ainda estará aberto com o serviço do Apache iniciado. "Mate" o serviço com Crtl + C
 
-Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+Agora você pode iniciar o serviço do Apache no Serviços do Windows e pronto!
 
-1. Vestibulum id ligula porta felis euismod semper.
-2. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-3. Maecenas sed diam eget risus varius blandit sit amet non magna.
+## MySQL (ou MariaDB)
 
-Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
+Primeiramente já recomendo habilitar as extensões que permitirão o acesso ao banco de dados utilizando o PHP:  
+* Acesse o diretório ***C:\php*** e abra com um editor de texto o ***php.ini***  
+* Habilite as extensões tirando o ***;*** (ponto e vírgula) do início das sentenças ***php_mysqli*** e ***php_pdo_mysql***
 
-Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+Baixe o MySQL ou MariaDB na página oficial de download.  
+> MySQL: <a href="https://dev.mysql.com/downloads/installer">https://dev.mysql.com/downloads/installer</a>  
+> MariaDB: <a href="https://mariadb.org/download">https://mariadb.org/download</a>  
 
-## Images
+Execute o instalador .msi baixado, seguindo as instruções e melhores práticas de instalação. Não irei entrar em outras considerações de configurações do MySQL neste momento, pois é uma assunto extenso e caberá em um post a parte.  
 
-Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
-
-![placeholder](https://placehold.it/800x400 "Large example image") ![placeholder](https://placehold.it/400x200 "Medium example image") ![placeholder](https://placehold.it/200x200 "Small example image")
-
-## Tables
-
-Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </tbody>
-</table>
-
-Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
+Pronto, agora você tem um servidor web Apache com PHP e MySQL configurado. Bora pro desenvolvimento!
