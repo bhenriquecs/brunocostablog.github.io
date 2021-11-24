@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: github
+  repo: bhenriquecs/bhenriquecs.github.io
+  branch: master
+  site_domain: bhenriquecs.netlify.com
 publish_mode: editorial_workflow
 media_folder: "assets/img/uploads"
 collections:
