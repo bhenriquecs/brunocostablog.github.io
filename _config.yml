@@ -1,7 +1,7 @@
 # Site Settings
 name: Bruno Costa
 title: Bruno Costa | Blog
-description: Para sysadmins, devs, users, todos.
+description: For sysadmins, devs, users, all.
 tags:
   - blog
   - github
@@ -48,9 +48,9 @@ two_columns_layout: true
 
 # Advanced Settings
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://www.brunocosta.dev" # the base hostname & protocol for your site
 google_analytics: "G-RTBMBCSW3F"
-language: "en"
+language: "pt-BR"
 categories_folder: category
 sent_message_url: "/contact/message-sent/"
 
@@ -63,7 +63,7 @@ collections:
   authors:
     output: true
 paginate_path: "/page/:num/"
-show_get_theme_btn: false
+show_get_theme_btn: true
 use_logo: false
 
 # Content paginator
@@ -143,7 +143,7 @@ translations:
       email: "Seu e-mail"
       message: "Sua mensagem"
     errors:
-      locale: "pt-br"
+      locale: "BR"
       empty_name: "Nome é obrigatório"
       empty_email: "E-mail é obrigatório"
       invalid_email: "E-mail inválido"
