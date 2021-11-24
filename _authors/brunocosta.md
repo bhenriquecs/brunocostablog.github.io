@@ -1,6 +1,6 @@
 ---
 layout: author
-photo: /assets/img/uploads/download-200x211.png
+photo: /assets/img/uploads/profile.png
 name: brunocosta
 display_name: Bruno Costa
 position: ""
