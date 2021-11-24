@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fa41034f-8185-4cbe-b5d2-cf488b2c455a/deploy-status)](https://app.netlify.com/sites/bhenriquecs/deploys)
+
 ### Donate
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SAKL66RSDGH48&source=url)
