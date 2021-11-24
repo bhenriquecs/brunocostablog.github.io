@@ -1,26 +1,29 @@
-name: Jekflix
-title: Jekflix | A blog theme for Jekyll
-description: Jekflix is a template for Jekyll inspired by Netflix and made by
-  Thiago Rossener.
+# Site Settings
+name: Bruno Costa
+title: Bruno Costa | Blog
+description: For sysadmins, devs, users, all.
 tags:
   - blog
-  - template
-  - jekyll
-  - theme
-  - netlify
+  - github
+  - sysadmin
+  - infraestrutura
+  - development
+  - user
+  - tecnologia
+  - ti
 show_hero: true
 menu:
   - title: Home
     url: /
-  - title: About
+  - title: Sobre
     url: /about
-  - title: Contact
+  - title: Contato
     url: /contact
   - title: Feed
     url: /feed.xml
-email: youremail@test.com
+email: bhenriquecs@gmail.com
 # See: https://disqus.com/
-disqus_username: disqus_username
+disqus_username: bhenriquecs
 # Contact Form Setting
 # See: https://formspree.io/
-formspree_form_id: formspree_form_id
+formspree_form_id: mvolpoyj

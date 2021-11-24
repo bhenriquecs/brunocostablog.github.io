@@ -31,7 +31,7 @@ translations:
       email: "Seu e-mail"
       message: "Sua mensagem"
     errors:
-      locale: "pt-br"
+      locale: "BR"
       empty_name: "Nome é obrigatório"
       empty_email: "E-mail é obrigatório"
       invalid_email: "E-mail inválido"
