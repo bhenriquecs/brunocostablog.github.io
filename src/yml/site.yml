@@ -1,14 +1,13 @@
-# Site Settings
+formspree_form_id: mvolpoyj
 name: Bruno Costa
 title: Bruno Costa | Blog
 description: For sysadmins, devs, users, all.
 tags:
   - blog
-  - github
+  - dev
   - sysadmin
   - infraestrutura
-  - development
-  - user
+  - desenvolvimento
   - tecnologia
   - ti
 show_hero: true
@@ -22,8 +21,4 @@ menu:
   - title: Feed
     url: /feed.xml
 email: bhenriquecs@gmail.com
-# See: https://disqus.com/
 disqus_username: bhenriquecs
-# Contact Form Setting
-# See: https://formspree.io/
-formspree_form_id: mvolpoyj
