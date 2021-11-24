@@ -1,15 +1,16 @@
 ---
 layout: author
-photo: /assets/img/uploads/profile.png
+photo: /assets/img/uploads/download-200x211.png
 name: brunocosta
 display_name: Bruno Costa
-position: Chief Editor
-bio: Só sei que nada sei.
+position: ""
+bio: Graduado em análise e desenvolvimento de sistemas, com experiência em
+  infraestrutura, sysadmim, devops e desenvolvimento. Atuação em projetos que
+  envolvem tecnologia e coordenação de equipes.
 github_username: brunocosta
-facebook_username: 
-twitter_username: 
-instagram_username: 
+facebook_username: null
+twitter_username: null
+instagram_username: null
 linkedin_username: bruno-h-costa-santos
-medium_username: 
+medium_username: null
 ---
-
