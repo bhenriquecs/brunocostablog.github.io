@@ -1,7 +1,7 @@
 ---
 layout: author
 photo: /assets/img/uploads/profile.png
-name: Bruno
+name: brunocosta
 display_name: Bruno Costa
 position: ""
 bio: Graduado em análise e desenvolvimento de sistemas, com experiência em
