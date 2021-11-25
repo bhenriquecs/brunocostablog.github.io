@@ -17,7 +17,7 @@ layout: page
 
   <p><strong>E-mail: </strong>bhenriquecs@gmail.com</p>
   <p><strong>LinkedIn: </strong><a href=https://www.linkedin.com/in/bruno-h-costa-santos>Bruno Costa</a></p>
-  <p><strong>Formulário de contato: </strong>
+  <p><strong>Formulário de contato: </strong></p>
   
   <div id="form" class="contact-form">
     <form accept-charset="UTF-8" method="POST" action="https://formspree.io/{% if site.formspree_form_id %}f/{{ site.formspree_form_id }}{% else %}{{ site.email }}{% endif %}" v-on:submit.prevent="validateBeforeSubmit" ref="contact">
