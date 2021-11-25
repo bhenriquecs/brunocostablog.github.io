@@ -41,7 +41,7 @@ Baixe e instale também o Visual C ++ Redistributable para Visual Studio 2015-20
 Descompacte o apache baixado na raiz do seu disco (geralmente C:\). Você terá algo como ***C:\Apache24*** .  
 Abra o CMD (Prompt de comando) e vá até o diretório ***C:\Apache24\bin***.  
 Execute:  
-```httpd.exe```
+`httpd.exe`
 
 O firewall do Windows pode pedir permissão para o Apache se comunique em específicas redes. Sugiro aceitar em redes domésticas e corporativas e não permitir em redes públicas.  
 O Apache já está instalado. Para conferir abra um navegador e acesse ***http://localhost***. Se aparecer a página com os dizeres ***"It Works!"*** significa que o Apache está funcionando corretamente.  
@@ -54,7 +54,7 @@ Para executar o Apache automaticamente sempre que o sistema for iniciado, sem a 
 * Abra o CMD como administrador (caso tenha o fechado)
 * Vá até o diretório ***C:\Apache24\bin***
 * Dê o comando:  
-```httpd.exe -k install```
+`httpd.exe -k install`
 
 Pronto! Agora você tem o Apache instalado como serviço do Windows o qual poderá gerenciar no Serviços (services.msc).
 
