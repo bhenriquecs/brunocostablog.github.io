@@ -4,7 +4,9 @@ layout: post
 title: Alterando a velocidade de rolagem do mouse no Linux
 description: Um "problema" que tive no Linux, na distro Ubuntu, era na
   velocidade do botão de rolagem do mouse.
-category: blog
+image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/linux-mouse_rh1ghm.jpg
+optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/linux-mouse_optimized_hwgsmo.jpg
+category: tutorial
 author: brunocosta
 paginate: false
 ---
