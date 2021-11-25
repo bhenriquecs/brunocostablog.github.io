@@ -1,5 +1,6 @@
 ---
 layout: category
 title: Cibersegurança
-slug: "{{slug}}"
+slug: ciberseguranca
+description: Uma categoria para postagens gerais sobre cibersegurança.
 ---

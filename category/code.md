@@ -1,6 +1,6 @@
 ---
 layout: category
 title: Desenvolvimento
-slug: code
-description: ""
+slug: desenvolvimento
+description: Uma categoria para postagens gerais sobre desenvolvimento.
 ---

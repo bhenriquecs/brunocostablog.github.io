@@ -1,5 +1,6 @@
 ---
 layout: category
 title: Linux
-slug: "{{slug}}"
+slug: linux
+description: Uma categoria para postagens gerais sobre Linux.
 ---

@@ -1,5 +1,6 @@
 ---
 layout: category
 title: Banco de dados
-slug: "{{slug}}"
+slug: bancodedados
+description: Uma categoria para postagens gerais sobre banco de dados.
 ---

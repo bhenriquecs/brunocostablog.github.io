@@ -1,5 +1,6 @@
 ---
 layout: category
 title: Rede
-slug: "{{slug}}"
+slug: rede
+description: Uma categoria para postagens gerais sobre rede.
 ---
