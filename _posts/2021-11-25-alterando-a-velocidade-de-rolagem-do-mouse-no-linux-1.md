@@ -10,27 +10,39 @@ category: tutorial
 author: brunocosta
 paginate: false
 ---
-Um "problema" que tive no Linux, na distro Ubuntu (para aqueles que estão iniciando em Linux, este é baseado no Debian), era na velocidade do botão de rolagem do mouse. Por padrão tive muita lentidão nas rolagem de páginas.
-Para resolver, utilizei o Inwheel. Aqui estarei utilizando como base o Ubuntu 20.04.
+Um "problema" que tive no Linux, na distro Ubuntu (para aqueles que estão iniciando em Linux, essa é baseado no Debian), era na velocidade do botão de rolagem do mouse. Por padrão tive muita lentidão nas rolagem de páginas.
 
-Instale o Imwheel
-Abra o Terminal (Crtl + Alt + T)
-Dê o comando e digite sua senha root (administrador)
-sudo apt-get install imwheel
+
+Para resolver, utilizei o ***Inwheel***. Aqui estarei utilizando como base o ***Ubuntu 20.04***.
+
+
+
+## Instalando o Imwheel
+
+
+Abra o ***Terminal*** (Crtl + Alt + T);  
+Digite o comando abaixo, dê enter e digite sua senha root;  
+`sudo apt-get install imwheel`
 		
-Configuração
-Baixe ou crie um novo documento Bash (.sh) com o script existente neste link http://www.nicknorton.net/mousewheel.sh (Obrigado!)
+## Configuração
+
+
+Baixe ou crie um novo documento ***Bash*** (.sh) com o script existente neste link <http://www.nicknorton.net/mousewheel.sh> (Obrigado!);
+
+
 Se você for iniciante no mundo Linux, pode encontrar alguma dificuldade na tarefa acima. Um exemplo de como poderá ser feito de forma simples e utilizando o ambiente gráfico:
-Clique no link que contém o script
-Copie o código
-Abra o menu de aplicativos e execute o "Editor de texto"
-			
-No Editor de texto cole o código copiado anteriormente
-Clique em "Salvar", escolha um diretório e salve com o nome "mousewheel.sh"
-			
-Agora vamos executar o arquivo no Terminal
-Será necessário acessar o Terminal e ir até o diretório onde salvou o script Bash. Uma forma simples de fazê-lo é acessando a pasta onde encontra-se o arquivo, clicar com o botão direito do mouse em uma área vazia da pasta e ir em "Abrir no Terminal"
-			
+
+
+* Clique no link que contém o script
+* Copie o código
+* Abra o menu de aplicativos e execute o ***Editor de texto***
+* No ***Editor de texto*** cole o código copiado anteriormente
+* Clique em ***Salvar***, escolha um diretório e salve com o nome "mousewheel.sh"
+
+Agora vamos executar o arquivo no ***Terminal***;
+
+Será necessário acessar o ***Terminal*** e ir até o diretório onde salvou o script ***Bash***. Uma forma simples de fazê-lo é acessando a pasta onde encontra-se o arquivo, clicar com o botão direito do mouse em uma área vazia da pasta e ir em ***Abrir no Terminal***;
+
 No Terminal, primeiro vamos dar permissão de execução usando o comando
 chmod +x mousewheel.sh
 		
