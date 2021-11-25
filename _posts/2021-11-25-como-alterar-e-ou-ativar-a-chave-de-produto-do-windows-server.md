@@ -2,7 +2,9 @@
 date: 2020-12-17 00:00:00
 layout: post
 title: Como alterar e/ou ativar a chave de produto do Windows Server
-description: Como alterar e/ou ativar a chave de produto do Windows Server.
+description: Como proceder para alterar ou ativar a chave de produto do Windows Server.
+image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blog/chave-windows_spspp4.png
+optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blog/chave-windows_optimized_l8l0zw.jpg
 category: windows
 tags:
   - servidores
@@ -36,7 +38,7 @@ Este tutorial tem como objetivo mostrar como inserir a chave de forma correta.
 * Ainda no CMD, insira o comando substituíndo os *AAAAA-AAAAA-AAAAA-AAAAA-AAAAA* por sua chave:  
 `cscript.exe c:\windows\system32\slmgr.vbs -ipk AAAAA-AAAAA-AAAAA-AAAAA-AAAAA`
 
-* Esse próximo comando, muitas das vezes não é necessário, pois o Windows já reconhece a chave na execução do comando anterior. Porém, para os casos que se fizer necessário, para ativar o sistema Windows, basta executar o comando:  
+* Esse próximo comando, muitas das vezes não é necessário, pois o Windows já reconhece a chave na execução do comando anterior. Porém, para os casos que se fizer necessário, para ativar o sistema Windows basta executar o comando:  
 `cscript.exe c:\windows\system32\slmgr.vbs -ato`
 
 Pronto! Seu sistema estará corretamente ativado/licenciado.
