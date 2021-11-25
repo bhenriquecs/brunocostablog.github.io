@@ -6,7 +6,10 @@ description: Um "problema" que tive no Linux, na distro Ubuntu, era na
   velocidade do botão de rolagem do mouse.
 image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/linux-mouse_rh1ghm.jpg
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/linux-mouse_optimized_hwgsmo.jpg
-category: tutorial
+category: "{{slug}}"
+tags:
+  - linux
+  - mouse
 author: brunocosta
 paginate: false
 ---
