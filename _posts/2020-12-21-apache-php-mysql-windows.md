@@ -2,8 +2,7 @@
 date: 2020-12-21T12:00:00.000Z
 layout: post
 title: Apache + PHP + MySQL no Windows
-subtitle: Como montar um servidor web com Apache com suporte ao PHP e MySQL sem
-  usar pacotes prontos como o WAMP e XAMP?
+subtitle: ""
 description: Como montar um servidor web com Apache com suporte ao PHP e MySQL
   sem usar pacotes prontos como o WAMP e XAMP?
 image: https://res.cloudinary.com/k4bv734/image/upload/v1637696792/blog/apache_aqldc8.jpg
@@ -18,6 +17,8 @@ tags:
 author: brunocosta
 paginate: true
 ---
+Como montar um servidor web com Apache com suporte ao PHP e MySQL sem usar pacotes prontos como o WAMP e XAMP?  
+
 Aqui iremos tratar somente as instalações e configurações iniciais para funcionamento padrão, não entraremos nas demais configurações que cada ferramenta possui.  
 Antes de tudo, recomendo a leitura das documentações oficiais de cada ferramenta/solução:
 
