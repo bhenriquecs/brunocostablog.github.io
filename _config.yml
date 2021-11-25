@@ -15,11 +15,13 @@ show_hero: true
 menu:
   - title: Home
     url: /
-  - title: Sobre
+  - title: Sobre mim
     url: /about
   - title: Contato
     url: /contact
-  - title: Feed
+  - title: Tags
+    url: /tags
+  - title: Feed RSS
     url: /feed.xml
 email: bhenriquecs@gmail.com
 # See: https://disqus.com/
@@ -63,7 +65,7 @@ collections:
   authors:
     output: true
 paginate_path: "/page/:num/"
-show_get_theme_btn: true
+show_get_theme_btn: false
 use_logo: false
 
 # Content paginator
