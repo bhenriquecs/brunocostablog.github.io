@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Code
+title: Desenvolvimento
 slug: code
-description: A category for code related posts.
+description: ""
 ---
