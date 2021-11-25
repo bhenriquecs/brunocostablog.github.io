@@ -1,6 +1,6 @@
 ---
 layout: category
 title: Virtual Machine
-slug: virtualmachine
+slug: virtual machine
 description: Uma categoria para postagens gerais sobre máquinas virtuais.
 ---
