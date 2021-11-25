@@ -25,22 +25,22 @@ Para contornar essa situação, vamos ativar a auditoria e avisar aos usuários 
 ## Configuração
 
 No servidor, clique com o botão direito e logo após em ***Propriedades*** na ***Partição*** ou ***Pasta Compartilhada*** que deseja ativar a auditoria;
-![Img 01]()
-![Img 02]()
+![Img 01](https://res.cloudinary.com/k4bv734/image/upload/v1637853863/blog_content/fileserver_1_aej9b7.png)
+![Img 02](https://res.cloudinary.com/k4bv734/image/upload/v1637853863/blog_content/fileserver_2_y5vz4i.png)
 
 Vá a aba ***Segurança*** e depois em ***Avançadas***;
-![Img 03]()
+![Img 03](https://res.cloudinary.com/k4bv734/image/upload/v1637853863/blog_content/fileserver_3_zwj1vv.png)
 
 Na janela que se abre, clique na aba ***Auditoria***. Dependendo das suas configurações de segurança do usuário utilizado, será necessário clicar em ***Continuar***;
 
 
 Clique em ***Adicionar*** na sequência;
-![Img 04]()
-![Img 05]()
+![Img 04](https://res.cloudinary.com/k4bv734/image/upload/v1637853863/blog_content/fileserver_4_sprmn7.png)
+![Img 05](https://res.cloudinary.com/k4bv734/image/upload/v1637853863/blog_content/fileserver_5_fshnzw.png)
 
 
 Na próxima janela selecione o usuário ou grupo que deseja auditar;	
-![Img 06]()
+![Img 06](https://res.cloudinary.com/k4bv734/image/upload/v1637853864/blog_content/fileserver_6_hkfwnc.jpg)
 	
 Após selecionado, as opções ficarão disponíveis para edição. Clique em  ***Exibir permissões avançadas***. Provavelmente o usuário ou grupo selecionado já terá algumas permissões pré-definidas, desmarque todas e marque as opções ***Excluir subpastas e arquivos*** e ***Excluir***;
 
@@ -62,10 +62,10 @@ Presumo que você tenha um servidor de contas (Active Directory), neste execute 
 Vá até ***Configurações do Computador > Configurações do Windows > Configurações de Segurança > Políticas Locais > Política de Auditoria***;
 
 Abra a opção ***Auditoria de acesso a objetos***;
-![Img 07]()
+![Img 07](https://res.cloudinary.com/k4bv734/image/upload/v1637853864/blog_content/fileserver_7_mkpjzk.png)
 
 Marque a opção ***Êxito*** para registrar apenas os registros dos arquivos excluídos. Caso seja seu desejo também registrar as tentativas de exclusão que falharam por motivo das configurações de restrições de acesso marque também a opção ***Falha***;
-![Img 08]()
+![Img 08](https://res.cloudinary.com/k4bv734/image/upload/v1637853863/blog_content/fileserver_8_uggopx.png)
 
 Clique em ***Ok*** para aplicar as configurações e feche as janelas abertas;
 
@@ -80,7 +80,7 @@ Navegue até os ***Logs do Windows > Segurança***;
 
 
 Aqui serão listadas todos os registros de segurança do servidor. Para facilitar a visualização, filtre pelo ID do eventos (geralmente ***4663***);
-![Img 09]()
+![Img 09](https://res.cloudinary.com/k4bv734/image/upload/v1637853864/blog_content/fileserver_9_j7ezsd.png)
 
 
 Configurada a auditoria de arquivos excluídos via mapeamento de rede.
