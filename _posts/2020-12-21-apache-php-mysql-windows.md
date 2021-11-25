@@ -74,7 +74,7 @@ Agora vamos configurar o Apache para usar esse PHP. Primeiro vamos parar o servi
 Abra o arquivo ***httpd.conf***, existente no diretório ***C:\Apache24\conf*** com um editor de texto e adicione o seguinte:  
 
 Para o PHP 7
-```xml
+```conf
 LoadModule php7_module "c:\php\php7apache2_4.dll"
   <IfModule php7_module>
     AddHandler application/x-httpd-php .php
@@ -84,7 +84,7 @@ LoadModule php7_module "c:\php\php7apache2_4.dll"
 ```
 
 Para o PHP 5
-```
+```conf
 LoadModule php5_module C:/PHP/php5apache2_4.dll
   <IfModule php5_module>
     DirectoryIndex index.html index.php
@@ -96,10 +96,8 @@ LoadModule php5_module C:/PHP/php5apache2_4.dll
 Agora execute o Apache manualmente utilizando o CMD.
 * Abra o CMD como administrador  
 * Vá até o diretório ***C:\Apache24\bin***  
-* Execute: 
-```
-httpd.exe
-```
+* Execute:  
+`httpd.exe`
 
 Se não houver erros quer dizer que ocorreu tudo bem com sua configuração e você poderá testar o PHP.  
 Crie um arquivo nomeado como phpinfo.php
