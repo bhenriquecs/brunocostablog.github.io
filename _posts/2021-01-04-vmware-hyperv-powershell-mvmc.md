@@ -2,13 +2,12 @@
 date: 2021-01-04T12:00:00.000Z
 layout: post
 title: Conversão de VM -  VMware para Hyper-v com PowerShell e MVMC
-subtitle: 'Embora seja um processo arriscado e traumático, podemos nos ver em uma situação que a melhor saída é optar por converter máquinas virtuais de um hypervisor a outro.'
-description: >-
-  Embora seja um processo arriscado e traumático, podemos nos ver em uma situação que a melhor saída é optar por converter máquinas virtuais de um hypervisor a outro.
-image: >-
-  https://res.cloudinary.com/k4bv734/image/upload/v1637712031/blog/vmware-hyperv_lmmzeg.jpg
-optimized_image: >-
-  https://res.cloudinary.com/k4bv734/image/upload/v1637712031/blog/vmware-hyperv-optimized_cabw1p.jpg
+subtitle: ""
+description: Embora seja um processo arriscado e traumático, podemos nos ver em
+  uma situação que a melhor saída é optar por converter máquinas virtuais de um
+  hypervisor a outro.
+image: https://res.cloudinary.com/k4bv734/image/upload/v1637712031/blog/vmware-hyperv_lmmzeg.jpg
+optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637712031/blog/vmware-hyperv-optimized_cabw1p.jpg
 category: virtualmachine
 tags:
   - virtualmachine
@@ -58,4 +57,4 @@ ConvertTo-MvmcVirtualHardDisk "C:\path\vmexemplo-unico.vmdk" -VhdType DynamicHar
 ```
 Lembrando que deve indicar os diretórios desejados em ***"C:\path"***.
 
-Agora é só aguardar a conclusão da conversão, a qual o tempo irá depender do tamanho do seu disco virtual. Após é só criar uma nova VM no Hyper-V indicando o novo disco .vhdx criado.
+Agora é só aguardar a conclusão da conversão, a qual o tempo irá depender do tamanho do seu disco virtual. Após é só criar uma nova VM no Hyper-V indicando o novo disco ***.vhdx*** criado.
