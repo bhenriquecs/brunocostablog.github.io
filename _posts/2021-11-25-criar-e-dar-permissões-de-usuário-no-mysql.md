@@ -1,5 +1,5 @@
 ---
-date: 2020-12-17 00:00:00
+date: 2020-12-22 00:00:00
 layout: post
 title: Criar e dar permissões de usuário no MySQL
 description: Criar e dar permissões de usuário no MySQL.

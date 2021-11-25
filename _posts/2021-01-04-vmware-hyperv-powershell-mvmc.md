@@ -1,5 +1,5 @@
 ---
-date: 2021-01-04T12:00:00.000Z
+date: 2021-03-07 12:00:00
 layout: post
 title: Conversão de VM -  VMware para Hyper-v com PowerShell e MVMC
 subtitle: ""

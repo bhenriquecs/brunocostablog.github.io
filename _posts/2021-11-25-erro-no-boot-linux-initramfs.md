@@ -1,5 +1,5 @@
 ---
-date: 2020-12-17 00:00:00
+date: 2020-12-29 00:00:00
 layout: post
 title: Erro no boot Linux (initramfs)
 description: Erro "initramfs" na tentativa de inicialização do sistema.
@@ -54,4 +54,4 @@ Pronto! Finalizada a correção, poderá reiniciar com o comando:
 `sudo reboot` 
 
 
-Retire a mídia ***"live"*** e inicie seu sistema normalmente.
+Retire a mídia ***"live"*** e inicie seu sistema normalmente.

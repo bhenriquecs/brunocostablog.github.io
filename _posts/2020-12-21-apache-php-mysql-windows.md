@@ -1,5 +1,5 @@
 ---
-date: 2020-12-21T12:00:00.000Z
+date: 2021-03-06 12:00:00
 layout: post
 title: Apache + PHP + MySQL no Windows
 subtitle: ""

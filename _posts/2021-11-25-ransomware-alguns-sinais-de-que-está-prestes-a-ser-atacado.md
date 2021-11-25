@@ -1,5 +1,5 @@
 ---
-date: 2020-12-17 00:00:00
+date: 2020-12-19 00:00:00
 layout: post
 title: "Ransomware: alguns sinais de que está prestes a ser atacado"
 description: Geralmente em uma ataque Ransomware, o atacante/invasor utiliza

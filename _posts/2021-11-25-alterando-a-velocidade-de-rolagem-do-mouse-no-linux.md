@@ -1,5 +1,5 @@
 ---
-date: 2020-12-17 00:00:00
+date: 2020-12-27 00:00:00
 layout: post
 title: Alterando a velocidade de rolagem do mouse no Linux
 description: Um "problema" que tive no Linux, na distro Ubuntu, era na
