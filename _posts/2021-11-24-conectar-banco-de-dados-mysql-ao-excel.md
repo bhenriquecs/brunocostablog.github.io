@@ -6,7 +6,7 @@ subtitle: ""
 description: Conectar banco de dados MySQL ao Excel
 image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blog/excel-mysql_i1tdnc.jpg
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blog/excel-mysql_optimized_dxgzt5.jpg
-category: "{{slug}}"
+category: banco-de-dados
 tags:
   - mysql
   - excel

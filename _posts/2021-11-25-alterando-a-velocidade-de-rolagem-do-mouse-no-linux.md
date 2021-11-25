@@ -6,7 +6,7 @@ description: Um "problema" que tive no Linux, na distro Ubuntu, era na
   velocidade do botão de rolagem do mouse.
 image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/linux-mouse_rh1ghm.jpg
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/linux-mouse_optimized_hwgsmo.jpg
-category: "{{slug}}"
+category: linux
 tags:
   - linux
   - mouse
@@ -66,7 +66,8 @@ Por fim clique em ***Apply***;
 
 Pronto! Faça o teste e veja que a rolagem está bem mais ágil;
 
-Caso queira aumentar ou diminuir a rolagem, basta executar o script novamente;
+Caso queira aumentar ou diminuir a rolagem, basta executar o script novamente
+;
 
 Para aqueles que possuem mouse com botões extras além dos dois padrões e rolagem, caso encontrem algum problema nestes adicionais, tente adicionar ***-b "4 5"*** ao ***Imwheel***.  
 No terminal dê o comando:  
