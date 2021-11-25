@@ -9,6 +9,8 @@ optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blo
 category: windows
 tags:
   - windows10
+  - formatação
+  - instalação
 author: brunocosta
 paginate: false
 ---
@@ -27,8 +29,6 @@ Primeiro é necessário extrair a ISO do Windows 10 para adicionarmos um novo ar
 
 Agora abra o ***Bloco de Notas*** (notepad.exe) e adicione o seguinte: 
 ```
-[EditionID] 
-Professional
 [Channel]
 Retail
 
@@ -66,16 +66,4 @@ OEM
 [VL]
 0
 
-```
-
-Caso queira que apareça a opção de escolher a edição no momento da instalação, retire do seu arquivo ***ei.cfg*** as linhas:  
-```
-[EditionID] 
-Professional
-```
-
-Deixe somente:  
-```
-[Channel] 
-Retail
 ```
