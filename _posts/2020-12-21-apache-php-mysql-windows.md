@@ -21,29 +21,27 @@ paginate: true
 Aqui iremos tratar somente as instalações e configurações iniciais para funcionamento padrão, não entraremos nas demais configurações que cada ferramenta possui.  
 Antes de tudo, recomendo a leitura das documentações oficiais de cada ferramenta/solução:
 
->Apache: <http://httpd.apache.org/docs/current/platform/windows.html>  
->PHP: <https://www.php.net/manual/en/index.php>  
->MySQL: <https://dev.mysql.com/doc>
+* Apache: <http://httpd.apache.org/docs/current/platform/windows.html>  
+* PHP: <https://www.php.net/manual/en/index.php>  
+* MySQL: <https://dev.mysql.com/doc>
 
 ## Apache
 
 O Apache não fornece binários para Windows, porém existem várias opções de terceiros disponíveis para download, como por exemplo o Apache Lounge e Apache Haus.  
 Baixe a versão correta para o seu sistema operacional, x86 (32 bits) ou x64 (64 bits):
 
->32 bits: <https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.46-win32-VS16.zip>  
->64 bits: <https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.46-win64-VS16.zip>
+* 32 bits: <https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.46-win32-VS16.zip>  
+* 64 bits: <https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.46-win64-VS16.zip>
 
 Baixe e instale também o Visual C ++ Redistributable para Visual Studio 2015-2019, caso seu sistema não o tenha. Também escolha a versão apropriada.
 
->32 bits: <https://aka.ms/vs/16/release/VC_redist.x86.exe>  
->64 bits: <https://aka.ms/vs/16/release/VC_redist.x64.exe>
+* 32 bits: <https://aka.ms/vs/16/release/VC_redist.x86.exe>  
+* 64 bits: <https://aka.ms/vs/16/release/VC_redist.x64.exe>
 
 Descompacte o apache baixado na raiz do seu disco (geralmente C:\). Você terá algo como ***C:\Apache24*** .  
-Abra o CMD (Prompt de comando) e vá até o diretório ***C:\Apache24\bin*** .
+Abra o CMD (Prompt de comando) e vá até o diretório ***C:\Apache24\bin***.  
 Execute:  
-```
-httpd.exe
-```
+```httpd.exe```
 
 O firewall do Windows pode pedir permissão para o Apache se comunique em específicas redes. Sugiro aceitar em redes domésticas e corporativas e não permitir em redes públicas.  
 O Apache já está instalado. Para conferir abra um navegador e acesse ***http://localhost***. Se aparecer a página com os dizeres ***"It Works!"*** significa que o Apache está funcionando corretamente.  
@@ -56,9 +54,7 @@ Para executar o Apache automaticamente sempre que o sistema for iniciado, sem a 
 * Abra o CMD como administrador (caso tenha o fechado)
 * Vá até o diretório ***C:\Apache24\bin***
 * Dê o comando:  
-```
-httpd.exe -k install
-```
+```httpd.exe -k install```
 
 Pronto! Agora você tem o Apache instalado como serviço do Windows o qual poderá gerenciar no Serviços (services.msc).
 
@@ -78,7 +74,7 @@ Agora vamos configurar o Apache para usar esse PHP. Primeiro vamos parar o servi
 Abra o arquivo ***httpd.conf***, existente no diretório ***C:\Apache24\conf*** com um editor de texto e adicione o seguinte:  
 
 Para o PHP 7
-```
+```xml
 LoadModule php7_module "c:\php\php7apache2_4.dll"
   <IfModule php7_module>
     AddHandler application/x-httpd-php .php
@@ -112,7 +108,7 @@ Crie um arquivo nomeado como phpinfo.php
 * Abra o navegador e acesse <http://localhost/phpinfo.php>
 * Se tudo tiver certo, você verá uma página com algumas informações do seu sistema. Caso retorne alguma algo como ***"Erro interno do servidor"***, significa que algo está errado. Verifique as configurações feitas até aqui.
 
-Se seguiu exatamente como neste tutorial, o CMD ainda estará aberto com o serviço do Apache iniciado. "Mate" o serviço com Crtl + C
+Se seguiu exatamente como neste tutorial, o CMD ainda estará aberto com o serviço do Apache iniciado. "Mate" o serviço com Crtl + C.
 
 Agora você pode iniciar o serviço do Apache no Serviços do Windows e pronto!
 
@@ -123,8 +119,8 @@ Primeiramente já recomendo habilitar as extensões que permitirão o acesso ao 
 * Habilite as extensões tirando o ***;*** (ponto e vírgula) do início das sentenças ***php_mysqli*** e ***php_pdo_mysql***
 
 Baixe o MySQL ou MariaDB na página oficial de download.  
-> MySQL: <https://dev.mysql.com/downloads/installer>  
-> MariaDB: <https://mariadb.org/download>  
+* MySQL: <https://dev.mysql.com/downloads/installer>  
+* MariaDB: <https://mariadb.org/download>  
 
 Execute o instalador .msi baixado, seguindo as instruções e melhores práticas de instalação. Não irei entrar em outras considerações de configurações do MySQL neste momento, pois é uma assunto extenso e caberá em um post a parte.  
 
