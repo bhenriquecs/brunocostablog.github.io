@@ -43,35 +43,46 @@ Agora vamos executar o arquivo no ***Terminal***;
 
 Será necessário acessar o ***Terminal*** e ir até o diretório onde salvou o script ***Bash***. Uma forma simples de fazê-lo é acessando a pasta onde encontra-se o arquivo, clicar com o botão direito do mouse em uma área vazia da pasta e ir em ***Abrir no Terminal***;
 
-No Terminal, primeiro vamos dar permissão de execução usando o comando
-chmod +x mousewheel.sh
+No ***Terminal***, primeiro vamos dar permissão de execução usando o comando:  
+`chmod +x mousewheel.sh`
+
+Agora vamos executar o script:  
+`sudo ./mousewheel.sh`
+
+Será solicitada a senha root, digite-a e dê enter;
+
+Se tudo correr bem, será apresentada a tela onde conseguirá definir a velocidade da rolagem do mouse. Indico definir em 3, porém fica a seu critério; 
+
+Por fim clique em ***Apply***;
+
+Pronto! Faça o teste e veja que a rolagem está bem mais ágil;
+
+Caso queira aumentar ou diminuir a rolagem, basta executar o script novamente;
+
+Para aqueles que possuem mouse com botões extras além dos dois padrões e rolagem, caso encontrem algum problema nestes adicionais, tente adicionar ***-b "4 5"*** ao ***Imwheel***.  
+No terminal dê o comando:  
+`imwheel -b "4 5"`
+
+## Configurando o Imwheel para iniciar na reinicialização
+
+Por padrão o ***Imwheel*** não irá carregar a configuração realizada a cada reinicio do sistema, tendo assim que fazer todo o procedimento novamente. Embora seja uma tarefa simples, é um trabalho adicional que precisamos contornar.
+
+Faça o seguinte:  
+No Menu de aplicativos pesquise por ***aplicativos iniciais***;
+
+Na próxima janela, clique em ***Adicionar***;  
+Digite nos campos correspondentes:
+* Nome = Imwheel
+* Comando = selecione o arquivo .sh (mousewheel.sh)
+* Comentário = Escreva o que quiser
+
+Clique em ***Adicionar*** e terá terminado as configurações!
 		
-Agora vamos executar o script
-sudo ./mousewheel.sh
-		
-Será solicitada a senha root, digite-a e dê enter
-Se tudo correr bem, será apresentada a tela onde conseguirá definir a velocidade da rolagem do mouse. Indico definir em 3, porém fica a seu critério. Por fim clique em "Apply"
-		
-Pronto! Faça o teste e veja que a rolagem está bem mais ágil
-Caso queira aumentar ou diminuir a rolagem, basta executar o script novamente
-Para aqueles que possuem mouse com botões extras além dos dois padrões e rolagem, caso encontrem algum problema nestes adicionais, tente adicionar -b "4 5" ao Imwheel. No terminal dê o comando:
-imwheel -b "4 5"
+## Manual
+Para obter mais detalhes do ***Imwheel***, digite no ***Terminal*** para acesso ao manual:  
+`man imwheel`
 	
-Configurando o Imwheel para iniciar na reinicialização
-Por padrão o Imwheel não irá carregar a configuração realizada a cada reinicio do sistema, tendo assim que fazer todo o procedimento novamente. Embora seja uma tarefa simples, é um trabalho adicional que precisamos contornar, haha. Faça o seguinte:
-No Menu de aplicativos pesquise por "aplicativos iniciais", caso utilize o sistema em inglês "startup applications"
-Na próxima janela, clique em "Adicionar"
-Digite:
-Nome = Imwheel
-Comando = selecione o arquivo .sh (mousewheel.sh)
-Comentário = Escreva o que quiser
-Clique em "Adicionar" e terá terminado as configurações!
-		
-Manual
-Para obter mais detalhes do Imwheel, digite no Terminal para acesso ao manual
-man imwheel
-	
-Fonte:
-https://dev.to/bbavouzet/ubuntu-20-04-mouse-scroll-wheel-speed-536o
-https://io.bikegremlin.com/11541/linux-mouse-scroll-speed/
+### Fonte:
+> <https://dev.to/bbavouzet/ubuntu-20-04-mouse-scroll-wheel-speed-536o>  
+> <https://io.bikegremlin.com/11541/linux-mouse-scroll-speed/>
 
