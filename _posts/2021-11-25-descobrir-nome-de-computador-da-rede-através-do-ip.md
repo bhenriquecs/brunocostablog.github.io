@@ -3,6 +3,8 @@ date: 2020-12-17 00:00:00
 layout: post
 title: Descobrir nome de computador da rede através do IP
 description: Descobrir nome de computador da rede através do IP.
+image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/ip_otm3se.jpg
+optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/ip_optimized_jwhl2e.jpg
 category: rede
 tags:
   - IP
