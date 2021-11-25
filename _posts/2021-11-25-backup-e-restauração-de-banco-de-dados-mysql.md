@@ -1,5 +1,5 @@
 ---
-date: 2020-12-17 00:00:00
+date: 2020-12-18 00:00:00
 layout: post
 title: Backup e restauração de banco de dados MySQL
 description: Maneira simples de fazer backup e restauração de banco de dados MySQL.
@@ -42,4 +42,4 @@ Execute o comando:
 Onde:  
 ***bancodedados*** é o nome do banco;  
 ***path*** é o caminho onde se encontra ou irá salvar o backup do banco.
-
+

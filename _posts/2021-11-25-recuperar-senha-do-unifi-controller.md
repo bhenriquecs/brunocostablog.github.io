@@ -1,5 +1,5 @@
 ---
-date: 2020-12-17 00:00:00
+date: 2020-12-18 00:00:00
 layout: post
 title: Recuperar senha do Unifi Controller
 description: Recuperação da senha do Unifi Controller.
@@ -52,4 +52,4 @@ E por último este:
 No resultado serão exibidos o ***"name"*** e ***"x_password"***, que, como os nomes sugerem, são o usuário e senha, respectivamente;
 
 Com os dados em mãos, basta acessar normalmente o painel do Unifi Controller. Sugiro realizar a troca da senha após o procedimento.
-
+
