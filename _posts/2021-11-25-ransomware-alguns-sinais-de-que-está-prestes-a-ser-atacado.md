@@ -14,7 +14,7 @@ tags:
 author: brunocosta
 paginate: false
 ---
-Geralmente em uma ataque Ransomware, o atacante/invasor utiliza ferramentas legítimas para preparar o terreno antes do ataque. O sujeito(s) já terá acesso a rede da vítima. Os métodos que permitirão a invasão explicarei em outro post, mas comumente são via arquivos maliciosos enviados por e-mail ou via algum drive em nuvem e executados por usuários com pouca instrução tecnológica. Utilizam também de artifícios da engenharia social, entre outros meios.
+Geralmente em um ataque Ransomware, o atacante/invasor utiliza ferramentas legítimas para preparar o terreno antes do ataque. O sujeito(s) já terá acesso a rede da vítima. Os métodos que permitirão a invasão explicarei em outro post, mas comumente são via arquivos maliciosos enviados por e-mail ou via algum drive em nuvem e executados por usuários com pouca instrução tecnológica. Utilizam também de artifícios da engenharia social, entre outros meios.
 
 Com o sucesso no acesso a rede, listarei abaixo alguns indicadores de que estão vasculhando sua rede em busca de brechas para execução do script malicioso:
 
@@ -43,4 +43,4 @@ Os invasores podem implantar pequenos ataques em alguns computadores da rede par
 
 
 
-Bem, esses são alguns sinais e dicas a se observarem em segurança, para evitarmos, assim, um ataque bem sucedido de Ransomware.
+Bem, esses são alguns sinais e dicas a se observar em segurança, para evitarmos, assim, um ataque bem sucedido de Ransomware.
