@@ -56,7 +56,7 @@ Agora vamos executar o script:
 
 Será solicitada a senha root, digite-a e dê enter;
 
-Se tudo correr bem, será apresentada a tela onde conseguirá definir a velocidade da rolagem do mouse. Indico definir em 3, porém fica a seu critério; 
+Se tudo correr bem, será apresentada a tela onde conseguirá definir a velocidade da rolagem do mouse. Indico definir em **3**, porém fica a seu critério; 
 
 Por fim clique em ***Apply***;
 ![Img 04](https://res.cloudinary.com/k4bv734/image/upload/v1637846612/blog_content/linux-mouse-content_4_jjidxt.png)
