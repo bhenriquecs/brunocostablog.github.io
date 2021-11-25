@@ -36,12 +36,17 @@ Se você for iniciante no mundo Linux, pode encontrar alguma dificuldade na tare
 * Clique no link que contém o script
 * Copie o código
 * Abra o menu de aplicativos e execute o ***Editor de texto***
+![Img 01]()
+
+
 * No ***Editor de texto*** cole o código copiado anteriormente
 * Clique em ***Salvar***, escolha um diretório e salve com o nome "mousewheel.sh"
+![Img 02]()
 
 Agora vamos executar o arquivo no ***Terminal***;
 
 Será necessário acessar o ***Terminal*** e ir até o diretório onde salvou o script ***Bash***. Uma forma simples de fazê-lo é acessando a pasta onde encontra-se o arquivo, clicar com o botão direito do mouse em uma área vazia da pasta e ir em ***Abrir no Terminal***;
+![Img 03]()
 
 No ***Terminal***, primeiro vamos dar permissão de execução usando o comando:  
 `chmod +x mousewheel.sh`
@@ -54,6 +59,7 @@ Será solicitada a senha root, digite-a e dê enter;
 Se tudo correr bem, será apresentada a tela onde conseguirá definir a velocidade da rolagem do mouse. Indico definir em 3, porém fica a seu critério; 
 
 Por fim clique em ***Apply***;
+![Img 04]()
 
 Pronto! Faça o teste e veja que a rolagem está bem mais ágil;
 
@@ -69,12 +75,14 @@ Por padrão o ***Imwheel*** não irá carregar a configuração realizada a cada
 
 Faça o seguinte:  
 No Menu de aplicativos pesquise por ***aplicativos iniciais***;
+![Img 05]()
 
 Na próxima janela, clique em ***Adicionar***;  
 Digite nos campos correspondentes:
 * Nome = Imwheel
 * Comando = selecione o arquivo .sh (mousewheel.sh)
 * Comentário = Escreva o que quiser
+![Img 06]()
 
 Clique em ***Adicionar*** e terá terminado as configurações!
 		
