@@ -8,7 +8,7 @@ optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blo
 category: rede
 tags:
   - IP
-  - ""
+  - windows
 author: brunocosta
 paginate: false
 ---
