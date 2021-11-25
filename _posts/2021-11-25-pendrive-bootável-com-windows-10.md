@@ -9,6 +9,7 @@ category: windows
 tags:
   - windows
   - instalação
+  - formatação
   - boot
 author: brunocosta
 paginate: false
