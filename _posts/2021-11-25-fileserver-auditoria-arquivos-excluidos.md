@@ -4,7 +4,7 @@ layout: post
 title: File Server - Auditoria arquivos excluídos
 description: Arquivos deletados através do mapeamento de rede (Pasta
   Compartilhada), diferentemente dos excluídos localmente, não são enviados para
-  a "lixeira".
+  a lixeira.
 image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blog/fileserver_hpbn4y.jpg
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blog/fileserver_optimized_hooyd9.jpg
 category: servidores
@@ -17,7 +17,7 @@ paginate: false
 ---
 Arquivos deletados através do mapeamento de rede (Pasta Compartilhada), diferentemente dos excluídos localmente, não são enviados para a ***lixeira***. Funciona como quando utilizamos a combinação Shift + Del. Para recuperação devemos recorrer aos nossos backups ou, para aqueles que são imprudentes com os backups, utilizar algum software de recuperação (que nem sempre têm o resultado desejado).
 
-Qualquer que seja o motivo da exclusão, premeditada ou não, é necessário saber quem a fez, pois há casos onde os arquivos deletados são dados/informações estratégicas para a organização e precisamos reportar o "meliante".
+Qualquer que seja o motivo da exclusão, premeditada ou não, é necessário saber quem a fez, pois há casos onde os arquivos deletados são dados/informações estratégicas para a organização e precisamos reportar o *meliante*.
 
 
 Para contornar essa situação, vamos ativar a auditoria e avisar aos usuários sobre. Com certeza, todos irão ter mais atenção em suas ações. A seguir breve tutorial de como ativar este recurso, realizado no ***Windows Server 2019***:
