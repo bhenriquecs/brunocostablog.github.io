@@ -45,8 +45,8 @@ Execute:
 `httpd.exe`
 
 O firewall do Windows pode pedir permissão para o Apache se comunique em específicas redes. Sugiro aceitar em redes domésticas e corporativas e não permitir em redes públicas.  
-O Apache já está instalado. Para conferir abra um navegador e acesse ***http://localhost***. Se aparecer a página com os dizeres ***"It Works!"*** significa que o Apache está funcionando corretamente.  
-Caso receba algum aviso sobre "não poder determinar o nome do domínio totalmente qualificado", faça o seguinte:
+O Apache já está instalado. Para conferir abra um navegador e acesse ***http://localhost***. Se aparecer a página com os dizeres ***It Works!*** significa que o Apache está funcionando corretamente.  
+Caso receba algum aviso sobre *não poder determinar o nome do domínio totalmente qualificado*, faça o seguinte:
 * Com um editor de texto, abra o arquivo httpd.conf, existente no diretório ***C:\Apache24\conf***
 * Encontre `ServerName <yourhostname>`. Descomente e altere `<yourhostname>` por `<localhost>` ou pelo `<nome do host>` do sistema
 * Salve o arquivo
@@ -63,7 +63,7 @@ Pronto! Agora você tem o Apache instalado como serviço do Windows o qual poder
 
 Baixe o PHP versão TS (Thread Safe) correspondente ao seu sistema (x86 ou x64), na [página oficial](https://windows.php.net/download/) de download do PHP para Windows. Sugiro a versão mais recente disponível, porém fica a critério dos seus requisitos.  
 
-Crie uma pasta nomeada como "php" na raiz do seu disco ***C:\php***.  
+Crie uma pasta nomeada como ***php*** na raiz do seu disco ***C:\php***.  
 Extraia o arquivo baixado anteriormente nesta pasta.  
 
 Acesse o diretório ***C:\php*** e renomeie o ***php.ini-production*** ou ***php.ini-development*** (somente um desses) para ***php.ini***, levando em consideração se está instalando para produção ou em ambiente de desenvolvimento/testes.  
@@ -105,9 +105,9 @@ Crie um arquivo nomeado como phpinfo.php
 * Digite `<?php phpinfo();?>` no arquivo
 * Salve no diretório ***C:\Apache24\htdocs***
 * Abra o navegador e acesse <http://localhost/phpinfo.php>
-* Se tudo tiver certo, você verá uma página com algumas informações do seu sistema. Caso retorne alguma algo como ***"Erro interno do servidor"***, significa que algo está errado. Verifique as configurações feitas até aqui.
+* Se tudo tiver certo, você verá uma página com algumas informações do seu sistema. Caso retorne alguma algo como ***Erro interno do servidor***, significa que algo está errado. Verifique as configurações feitas até aqui.
 
-Se seguiu exatamente como neste tutorial, o CMD ainda estará aberto com o serviço do Apache iniciado. "Mate" o serviço com Crtl + C.
+Se seguiu exatamente como neste tutorial, o CMD ainda estará aberto com o serviço do Apache iniciado. Encerre o serviço com Crtl + C.
 
 Agora você pode iniciar o serviço do Apache no Serviços do Windows e pronto!
 
