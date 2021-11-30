@@ -2,8 +2,8 @@
 date: 2020-12-27 00:00:00
 layout: post
 title: Alterando a velocidade de rolagem do mouse no Linux
-description: Um "problema" que tive no Linux, na distro Ubuntu, era na
-  velocidade do botão de rolagem do mouse.
+description: Um problema que tive no Linux, na distro Ubuntu, era na velocidade
+  do botão de rolagem do mouse.
 image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/linux-mouse_rh1ghm.jpg
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/linux-mouse_optimized_hwgsmo.jpg
 category: linux
@@ -13,7 +13,7 @@ tags:
 author: brunocosta
 paginate: false
 ---
-Um "problema" que tive no Linux, na distro Ubuntu (para aqueles que estão iniciando em Linux, essa é baseado no Debian), era na velocidade do botão de rolagem do mouse. Por padrão tive muita lentidão nas rolagem de páginas.
+Um problema que tive no Linux, na distro Ubuntu (para aqueles que estão iniciando em Linux, essa é baseado no Debian), era na velocidade do botão de rolagem do mouse. Por padrão tive muita lentidão nas rolagem de páginas.
 
 
 Para resolver, utilizei o ***Inwheel***. Aqui estarei utilizando como base o ***Ubuntu 20.04***.
