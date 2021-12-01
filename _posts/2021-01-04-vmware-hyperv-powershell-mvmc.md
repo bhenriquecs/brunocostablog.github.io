@@ -20,13 +20,13 @@ tags:
 author: brunocosta
 paginate: true
 ---
-Embora seja um processo arriscado e traumático, podemos nos ver em uma situação que a melhor saída é optar por converter máquinas virtuais de um hypervisor a outro.  
+Embora seja um processo arriscado e traumático, podemos nos ver em uma situação que a melhor saída é optar por converter máquinas virtuais de um hypervisor a outro.
 
 Neste exemplo de como proceder com essa tarefa, iremos converter uma VM VMware para Hyper-V utilizando o PowerShell e MVMC (Microsoft Virtual Machine Converter).
 
-Primeiro devemos saber qual o disco virtual da máquina virtual do WMware iremos utilizar. O VMware gera vários arquivos ***.vmdk***, se configurado o "split" do HD virtual na criação da VM. Para saber qual utilizará para conversão, entre nas Configurações da VM e na janela das Configurações da Máquina Virtual clique em "Disco rígido". Irá aparecer "Arquivo de disco" e será esse o arquivo a ser considerado. Vou considerar no exemplo o nome ***"vmexemplo-000001.vmdk"***.  
+Primeiro devemos saber qual o disco virtual da máquina virtual do WMware iremos utilizar. O VMware gera vários arquivos ***.vmdk***, se configurado o "split" do HD virtual na criação da VM. Para saber qual utilizará para conversão, entre nas Configurações da VM e na janela das Configurações da Máquina Virtual clique em "Disco rígido". Irá aparecer "Arquivo de disco" e será esse o arquivo a ser considerado. Vou considerar no exemplo o nome ***"vmexemplo-000001.vmdk"***.
 
-Abra o PowerShell com direitos elevados (administrador) no servidor com a máquina virtual com o VMware.  
+Abra o PowerShell com direitos elevados (administrador) no servidor com a máquina virtual com o VMware.
 
 No PowerShell, acesse o diretório onde se encontra instalado o VMware. No exemplo irei considerar a pasta de instalação padrão, porém faça conforme sua instalação.  
 ```
