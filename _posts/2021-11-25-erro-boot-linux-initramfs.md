@@ -2,7 +2,7 @@
 date: 2020-12-29 00:00:00
 layout: post
 title: Erro no boot Linux (initramfs)
-description: Erro "initramfs" na tentativa de inicialização do sistema.
+description: Erro initramfs na tentativa de inicialização do sistema.
 image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/initramfs_wuwsz0.jpg
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783287/blog/initramfs_optimized_ye7cry.jpg
 category: linux
