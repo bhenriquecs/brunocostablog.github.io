@@ -4,6 +4,8 @@ layout: post
 title: Conectar a um banco de dados MySQL utilizando PHP
 description: Como conectar a um banco de dados MySQL utilizando PHP atráves das
   bibliotecas MySQLi e PDO
+image: https://res.cloudinary.com/k4bv734/image/upload/v1641232056/blog/php_g3jvp0.jpg
+optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1641232056/blog/php_optimized_gnbp7p.jpg
 category: desenvolvimento
 tags:
   - php
