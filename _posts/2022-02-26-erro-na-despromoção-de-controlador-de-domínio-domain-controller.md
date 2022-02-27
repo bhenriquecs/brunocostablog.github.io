@@ -2,8 +2,8 @@
 date: 2022-02-25 18:14:00
 layout: post
 title: Erro na despromoção de Controlador de Domínio (Domain Controller)
-description: 'Uma solução para o erro "DFS Replication: Access is denied." ao
-  tentar despromover um DC.'
+description: "Uma solução para erro ao tentar despromover um DC: DFS
+  Replication: Access is denied."
 image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blog/active-directory_ugsuli.jpg
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1637783286/blog/active-directory_optimized_ckazmr.jpg
 category: servidores
