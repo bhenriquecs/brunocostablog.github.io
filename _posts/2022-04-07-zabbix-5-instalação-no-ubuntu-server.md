@@ -158,3 +158,67 @@ Instale os pacotes necessários:
 ```sudo apt-get install libopenipmi-dev libcurl4-openssl-dev libxml2-dev libssh2-1-dev libpcre3-dev```  
 ```sudo apt-get install libldap2-dev libiksemel-dev libcurl4-openssl-dev libgnutls28-dev```
 
+## Compilando e instalando o servidor Zabbix
+
+Acesse o diretório onde baixamos:  
+```cd /downloads/zabbix-5.4.0```
+
+Compilando e instalando:  
+```sudo ./configure --enable-server --enable-agent --enable-agent2 --with-mysql --with-openssl --with-net-snmp --with-openipmi --with-libcurl --with-libxml2 --with-ssh2 --with-ldap --enable-ipv6```  
+```sudo make```  
+```sudo make install```
+
+Após o processo acima, encontre a localização do arquivo zabbix_server.conf.  
+Primeiro, dê o comando abaixo:  
+```sudo updatedb```
+
+Logo após, encontre a localização do arquivo zabbix_server.conf no seu sistema:  
+```locate zabbix_server.conf```
+
+Após o comando acima, será apresentado o local onde se encontra o zabbix_server.conf.  
+Edite o arquivo zabbix_server.conf:  
+```sudo vi /usr/local/etc/zabbix_server.conf```
+
+O arquivo original, antes da nossa configuração, estará assim:  
+>LogFile=/tmp/zabbix_server.log  
+>DBName=zabbix  
+>DBUser=zabbix  
+>Timeout=4  
+>LogSlowQueries=3000  
+>StatsAllowedIP=127.0.0.1  
+
+Edite as linhas conforme abaixo:  
+>LogFile=/tmp/zabbix_server.log  
+>DBHost=localhost  
+>DBName=zabbix  
+>DBUser=zabbix  
+>DBPassword=zabbix123  
+>Timeout=4  
+>LogSlowQueries=3000  
+>StatsAllowedIP=127.0.0.1  
+
+NOTA: Descomente a linha DBPassword
+
+
+Salve o arquivo.
+
+Logo após inicie o servidor Zabbix:  
+```/usr/local/sbin/zabbix_server```
+
+Use o seguinte comando para iniciar o Agente Zabbix padrão:  
+```/usr/local/sbin/zabbix_agentd```
+
+Caso queira usar o novo agente (recomendo pesquisas sobre), dê o comando abaixo:  
+```/usr/local/sbin/zabbix_agent2 &```
+
+Mova todos os arquivos frontend do Zabbix para o diretório raiz de sua instalação Apache:  
+```mv /downloads/zabbix-5.4.0/ui /var/www/html/zabbix```
+
+Defina as permissões de arquivo:  
+```chown www-data.www-data /var/www/html/zabbix/* -R```
+
+Reinicie o serviço Apache:  
+```service apache2 restart```
+
+Feito isso, agora já será possível acessar a interface web do Zabbix e finalizar a instalação.
+
