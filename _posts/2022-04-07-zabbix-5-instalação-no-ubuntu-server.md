@@ -48,8 +48,7 @@ Crie um usuário de banco de dados chamado *zabbix*. Note que estou definindo um
 Dê a esse usuário chamado *zabbix* permissões sobre o banco de dados chamado *zabbix* :  
 ```GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'%';```
 
-Dê o comando abaixo para sair do CLI MySQL:  
-```quit;```
+Dê o comando abaixo para sair do CLI MySQL:```quit;```
 
 A partir de agora, vamos fazer o download o pacote de instalação *Zabbix*.
 Para melhor organização, primeiro crie um novo diretório:  
