@@ -48,10 +48,10 @@ Crie um banco de dados chamado *zabbix* :
 Crie um usuário de banco de dados chamado *zabbix*. Note que estou definindo uma senha a esse usuário como *zabbix123* :  
 ```CREATE USER 'zabbix'@'%' IDENTIFIED BY 'zabbix123';```
 
-Dê a esse usuário chamado *zabbix* permissões sobre o banco de dados chamado *zabbix* :  
+Dê a esse usuário chamado *zabbix* permissões sobre o banco de dados chamado *zabbix*:  
 ```GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'%';```
 
-Dê o comando abaixo para sair do CLI *MySQL*:  
+Dê o comando abaixo para sair do CLI *MySQL*:  
 ```quit;```
 
 A partir de agora, vamos fazer o download o pacote de instalação *Zabbix*.
