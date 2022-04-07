@@ -26,36 +26,57 @@ Neste tutorial utilizaremos:
 
 Primeiro verifique atualizações do sistema. Veja os comando abaixo:  
 Atualizando a lista de pacotes e programas:  
-```sudo apt-get update```
+```
+sudo apt-get update
+```
  
 Atualiza o sistema, realiza o download e instala atualizações de pacotes e dos programas do servidor:  
-```sudo apt-get upgrade```
+```
+sudo apt-get upgrade
+```
 
 ## Instalando e preparando o banco de dados
 
 Instale o serviço de banco de dados *MySQL*:  
-```sudo apt-get install mysql-server mysql-client```
+```
+sudo apt-get install mysql-server mysql-client
+```
 
 Após a instalação, acesse a linha de comando de serviço *MySQL*:  
-```mysql -u root -p```
+```
+mysql -u root -p
+```
 
 Crie um banco de dados chamado *zabbix* :  
-```CREATE DATABASE zabbix CHARACTER SET UTF8 COLLATE UTF8_BIN;```
+```
+CREATE DATABASE zabbix CHARACTER SET UTF8 COLLATE UTF8_BIN;
+```
 
 Crie um usuário de banco de dados chamado *zabbix*. Note que estou definindo uma senha a esse usuário como *zabbix123* :  
-```CREATE USER 'zabbix'@'%' IDENTIFIED BY 'zabbix123';```
+```
+CREATE USER 'zabbix'@'%' IDENTIFIED BY 'zabbix123';
+```
 
 Dê a esse usuário chamado *zabbix* permissões sobre o banco de dados chamado *zabbix* :  
-```GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'%';```
+```
+GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'%';
+```
 
-Dê o comando abaixo para sair do CLI MySQL:  ```quit;```
+Dê o comando abaixo para sair do CLI MySQL:
+```
+quit;
+```
 
 A partir de agora, vamos fazer o download o pacote de instalação *Zabbix*.
 Para melhor organização, primeiro crie um novo diretório:  
-```mkdir /downloads```
+```
+mkdir /downloads
+```
 
 Após a criação, acesse esse diretório pré-criado:  
-```cd /downloads```
+```
+cd /downloads
+```
 
 Agora sim iremos fazer o download do *Zabbix*. Aqui iremos baixar a última versão estável disponível na data de publicação deste post (5.4):  
 ```
@@ -63,32 +84,46 @@ sudo wget https://cdn.zabbix.com/zabbix/sources/stable/5.4/zabbix-5.4.0.tar.gz
 ```
 
 Descompactando o pacote baixado:  
-```tar -zxvf zabbix-5.4.0.tar.gz```
+```
+tar -zxvf zabbix-5.4.0.tar.gz
+```
 
 Acessando diretório após descompactação:  
-```cd zabbix-5.4.0/database/mysql/```
+```
+cd zabbix-5.4.0/database/mysql/
+```
 
 Importação do modelo de banco de dados. Um comando por vez!  
-```mysql -u zabbix -p zabbix < schema.sql```  
-```mysql -u zabbix -p zabbix < images.sql```  
-```mysql -u zabbix -p zabbix < data.sql```
+```
+mysql -u zabbix -p zabbix < schema.sql
+mysql -u zabbix -p zabbix < images.sql
+mysql -u zabbix -p zabbix < data.sql
+```
 
 Pronto! Finalizada a instalação do banco de dados *Zabbix*.
 
 ## Instalando o servidor web
 
 Instale o servidor web *Apache* e todos os pacotes necessários:  
-```sudo apt-get install apache2 php libapache2-mod-php php-cli php-mysql php-mbstring php-gd php-xml php-bcmath php-ldap mlocate```
+```
+sudo apt-get install apache2 php libapache2-mod-php php-cli php-mysql php-mbstring php-gd php-xml php-bcmath php-ldap mlocate
+```
 
 Dê o comando abaixo:  
-```sudo updatedb```
+```
+sudo updatedb
+```
 
 Logo após, encontre a localização do arquivo *php.ini* no seu sistema:  
-```locate php.ini```
+```
+locate php.ini
+```
 
 Após o comando acima, será apresentado o local onde se encontra o *php.ini* .
 Edite o arquivo *php.ini* . Aqui iremos utilizar o *Vi*, porém fique a vontade pra utilizar o editor de textos de sua preferência:  
-```sudo vi /etc/php/7.4/apache2/php.ini```
+```
+sudo vi /etc/php/7.4/apache2/php.ini
+```
 
 No *php.ini* , defina os seguintes itens conforme abaixo:  
 ```
@@ -103,7 +138,9 @@ date.timezone = America/Sao_Paulo
 Obviamente, salve o arquivo *php.ini* com as edições realizadas.
 
 Reinicie o serviço do *Apache* :  
-```service apache2 restart```
+```
+service apache2 restart
+```
 
 Finalizada a instalação do servidor web *Apache* com suporte ao *PHP* .
 
@@ -111,18 +148,26 @@ Finalizada a instalação do servidor web *Apache* com suporte ao *PHP* .
 
 Agora vamos fazer o download e instalar o pacote *GOLANG*.  
 Primeiro vamos criar um novo diretório em downloads:  
-```mkdir /downloads/go -p```
+```
+mkdir /downloads/go -p
+```
 
 Acesse esse novo diretório:  
-```cd /downloads/go```
+```
+cd /downloads/go
+```
 
 Baixe e descompacte o pacote:  
-```wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz```  
-```tar -C /usr/local -zxvf go1.16.4.linux-amd64.tar.gz```
+```
+wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz
+tar -C /usr/local -zxvf go1.16.4.linux-amd64.tar.gz
+```
 
 O *GOLANG* foi instalado na pasta */usr/local* .  
 Para funcionar corretamente, o *GO* espera que o sistema tenha um conjunto de variáveis de ambiente. Vamos criar um arquivo para automatizar a configuração das variáveis de ambiente necessárias:  
-```sudo vi /etc/profile.d/go.sh```
+```
+sudo vi /etc/profile.d/go.sh
+```
 
 Abaixo o conteúdo do arquivo:
 ```
@@ -133,10 +178,14 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
 
 Salve e reinicie seu servidor:  
-```sudo reboot```
+```
+sudo reboot
+```
 
 Após o servidor reiniciado, verifique se as variáveis de ambiente necessárias foram criadas automaticamente:  
-```env | grep -E "(ROOT|GOPATH)"```
+```
+env | grep -E "(ROOT|GOPATH)"
+```
 
 O retorno correto, se seguido conforme esse tutorial, deve ser esse:
 >GOROOT=/usr/local/go  
@@ -144,37 +193,53 @@ O retorno correto, se seguido conforme esse tutorial, deve ser esse:
 
 Agora crie uma conta de usuário *Zabbix*. Dê com comando *sudo* , se necessário.  
 Criando um novo grupo:  
-```groupadd zabbix```
+```
+groupadd zabbix
+```
 
 Adicionando o usuário:  
-```useradd -g zabbix -s /bin/bash zabbix```
+```
+useradd -g zabbix -s /bin/bash zabbix
+```
 
 Instale os pacotes necessários:  
-```sudo apt-get update```  
-```sudo apt-get install build-essential libmysqlclient-dev libssl-dev libsnmp-dev libevent-dev pkg-config```  
-```sudo apt-get install libopenipmi-dev libcurl4-openssl-dev libxml2-dev libssh2-1-dev libpcre3-dev```  
-```sudo apt-get install libldap2-dev libiksemel-dev libcurl4-openssl-dev libgnutls28-dev```
+```
+sudo apt-get update
+sudo apt-get install build-essential libmysqlclient-dev libssl-dev libsnmp-dev libevent-dev pkg-config
+sudo apt-get install libopenipmi-dev libcurl4-openssl-dev libxml2-dev libssh2-1-dev libpcre3-dev
+sudo apt-get install libldap2-dev libiksemel-dev libcurl4-openssl-dev libgnutls28-dev
+```
 
 ## Compilando e instalando o servidor Zabbix
 
 Acesse o diretório onde baixamos:  
-```cd /downloads/zabbix-5.4.0```
+```
+cd /downloads/zabbix-5.4.0
+```
 
 Compilando e instalando:  
-```sudo ./configure --enable-server --enable-agent --enable-agent2 --with-mysql --with-openssl --with-net-snmp --with-openipmi --with-libcurl --with-libxml2 --with-ssh2 --with-ldap --enable-ipv6```  
-```sudo make```  
-```sudo make install```
+```
+sudo ./configure --enable-server --enable-agent --enable-agent2 --with-mysql --with-openssl --with-net-snmp --with-openipmi --with-libcurl --with-libxml2 --with-ssh2 --with-ldap --enable-ipv6
+sudo make
+sudo make install
+```
 
 Após o processo acima, encontre a localização do arquivo *zabbix_server.conf* .  
 Primeiro, dê o comando abaixo:  
-```sudo updatedb```
+```
+sudo updatedb
+```
 
 Logo após, encontre a localização do arquivo *zabbix_server.conf* no seu sistema:  
-```locate zabbix_server.conf```
+```
+locate zabbix_server.conf
+```
 
 Após o comando acima, será apresentado o local onde se encontra o *zabbix_server.conf*.  
 Edite o arquivo *zabbix_server.conf* :  
-```sudo vi /usr/local/etc/zabbix_server.conf```
+```
+sudo vi /usr/local/etc/zabbix_server.conf
+```
 
 O arquivo original, antes da nossa configuração, estará assim:  
 >LogFile=/tmp/zabbix_server.log  
@@ -199,22 +264,34 @@ Edite as linhas conforme abaixo:
 Salve o arquivo.
 
 Logo após inicie o servidor *Zabbix* :  
-```/usr/local/sbin/zabbix_server```
+```
+/usr/local/sbin/zabbix_server
+```
 
 Use o seguinte comando para iniciar o agente *Zabbix* padrão:  
-```/usr/local/sbin/zabbix_agentd```
+```
+/usr/local/sbin/zabbix_agentd
+```
 
 Caso queira usar o novo agente (recomendo pesquisas sobre), dê o comando abaixo:  
-```/usr/local/sbin/zabbix_agent2 &```
+```
+/usr/local/sbin/zabbix_agent2 &
+```
 
 Mova todos os arquivos frontend do *Zabbix* para o diretório raiz de sua instalação *Apache* :  
-```mv /downloads/zabbix-5.4.0/ui /var/www/html/zabbix```
+```
+mv /downloads/zabbix-5.4.0/ui /var/www/html/zabbix
+```
 
 Defina as permissões de arquivo:  
-```chown www-data.www-data /var/www/html/zabbix/* -R```
+```
+chown www-data.www-data /var/www/html/zabbix/* -R
+```
 
 Reinicie o serviço *Apache* :  
-```service apache2 restart```
+```
+service apache2 restart
+```
 
 Feito isso, agora já será possível acessar a interface web do *Zabbix* e finalizar a instalação.
 
