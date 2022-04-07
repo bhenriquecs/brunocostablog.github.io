@@ -26,7 +26,7 @@ Neste tutorial utilizaremos:
 
 Primeiro verifique atualizações do sistema. Veja os comando abaixo:  
 Atualizando a lista de pacotes e programas:  
-```sudo apt-get update``` 
+```sudo apt-get update```
  
 Atualiza o sistema, realiza o download e instala atualizações de pacotes e dos programas do servidor:  
 ```sudo apt-get upgrade```
@@ -34,13 +34,13 @@ Atualiza o sistema, realiza o download e instala atualizações de pacotes e dos
 ## Instalando e preparando o banco de dados
 
 Instale o serviço de banco de dados *MySQL*:  
-```sudo apt-get install mysql-server mysql-client```  
+```sudo apt-get install mysql-server mysql-client```
 
 Após a instalação, acesse a linha de comando de serviço *MySQL*:  
-```mysql -u root -p```  
+```mysql -u root -p```
 
 Crie um banco de dados chamado *zabbix* :  
-```CREATE DATABASE zabbix CHARACTER SET UTF8 COLLATE UTF8_BIN;```  
+```CREATE DATABASE zabbix CHARACTER SET UTF8 COLLATE UTF8_BIN;```
 
 Crie um usuário de banco de dados chamado *zabbix*. Note que estou definindo uma senha a esse usuário como *zabbix123* :  
 ```CREATE USER 'zabbix'@'%' IDENTIFIED BY 'zabbix123';```
@@ -48,7 +48,7 @@ Crie um usuário de banco de dados chamado *zabbix*. Note que estou definindo um
 Dê a esse usuário chamado *zabbix* permissões sobre o banco de dados chamado *zabbix* :  
 ```GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'%';```
 
-Dê o comando abaixo para sair do CLI *MySQL*:  
+Dê o comando abaixo para sair do CLI MySQL:  
 ```quit;```
 
 A partir de agora, vamos fazer o download o pacote de instalação *Zabbix*.
@@ -70,7 +70,7 @@ Acessando diretório após descompactação:
 Importação do modelo de banco de dados. Um comando por vez!  
 ```mysql -u zabbix -p zabbix < schema.sql```  
 ```mysql -u zabbix -p zabbix < images.sql```  
-```mysql -u zabbix -p zabbix < data.sql```  
+```mysql -u zabbix -p zabbix < data.sql```
 
 Pronto! Finalizada a instalação do banco de dados *Zabbix*.
 
