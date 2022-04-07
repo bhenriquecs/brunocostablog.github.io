@@ -58,7 +58,9 @@ Após a criação, acesse esse diretório pré-criado:
 ```cd /downloads```
 
 Agora sim iremos fazer o download do *Zabbix*. Aqui iremos baixar a última versão estável disponível na data de publicação deste post (5.4):  
-```sudo wget https://cdn.zabbix.com/zabbix/sources/stable/5.4/zabbix-5.4.0.tar.gz```
+```
+sudo wget https://cdn.zabbix.com/zabbix/sources/stable/5.4/zabbix-5.4.0.tar.gz
+```
 
 Descompactando o pacote baixado:  
 ```tar -zxvf zabbix-5.4.0.tar.gz```
