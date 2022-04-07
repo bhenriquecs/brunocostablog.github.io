@@ -24,7 +24,7 @@ Neste tutorial utilizaremos:
 * GOLANG
 * IP 192.168.0.100 (Recomendo que configure IP fixo em seu servidor)
 
-Primeiro verifique atualizações do sistema. Veja os comando abaixo:  
+Primeiro verifique atualizações do sistema. Veja os comandos abaixo:  
 Atualizando a lista de pacotes e programas:  
 ```
 sudo apt-get update
