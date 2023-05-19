@@ -2,7 +2,34 @@
 layout: main
 ---
 
-    <section class="hero" style="background-image: url({{ featured.image }})">
-        <div class="pixels"></div>
-        <div class="gradient"></div>
-    </section>
+<section class="hero" style="background-image: url({{ featured.image }})">
+    <div class="pixels"></div>
+    <div class="gradient"></div>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+           <a href="about/" title="About Me">
+               <div class="tile purple profile">
+                   <h2 class="title">About Me</h2>
+                   <p>Hello World, I am {{site.author}}.</p>
+               </div>
+           </a>
+       </div>
+       <div class="col-md-2 col-sm-3 col-xs-6">
+           <a href="resume/" title="Resume" class="tile red">
+               <i class="icon-rems" style="font-size:8em"></i>
+           </a>
+       </div>
+       <div class="col-md-2 col-sm-3 col-xs-6">
+           <a href="blog/" title="Blog"  class="tile orange">
+               <i class="icon-blog" style="font-size:8em"></i>
+           </a>
+       </div>
+       <div class="col-md-2 col-sm-3 col-xs-6">
+           <a href="feed.xml" title="RSS Feed" class="tile orange">
+               <i class="icon-rss" style="font-size:8em"></i>
+           </a>
+       </div>
+   </div>
+   
+</section>
