@@ -2,6 +2,10 @@
 
 ## Author
 
+[Bruno Costa](https://brunocosta.dev/)
+
+## Dev Template
+
 [Thiago Rossener](https://rossener.com/)
 
 ## License
