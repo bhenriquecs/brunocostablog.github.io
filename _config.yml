@@ -15,7 +15,9 @@ show_hero: true
 menu:
   - title: Home
     url: /
-  - title: Sobre mim
+    - title: Hub
+    url: /hub
+  - title: Sobre
     url: /about
   - title: Contato
     url: /contact
