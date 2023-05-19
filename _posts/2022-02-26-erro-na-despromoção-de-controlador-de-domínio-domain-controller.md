@@ -64,6 +64,6 @@ Marque a caixa para "forçar" a despromoção
 e siga conforme as etapas.
 
 
-blog.brunocosta.dev
+brunocosta.dev
 Após a despromoção, como a mesma foi de maneira forçada, há a necessidade de limpar os metadados existentes nos demais DC's da rede (caso existam outros).
 Veja como fazer em [Limpar metadados do Active Directory](https://brunocosta.dev/limpar-metadados-do-active-directory/).

@@ -1,5 +1,5 @@
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://blog.brunocosta.dev" # the base hostname & protocol for your site
+url: "https://brunocosta.dev" # the base hostname & protocol for your site
 google_analytics: "G-RTBMBCSW3F"
 language: "pt-BR"
 categories_folder: category
