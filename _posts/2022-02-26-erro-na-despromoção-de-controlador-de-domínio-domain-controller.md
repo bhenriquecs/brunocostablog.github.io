@@ -23,7 +23,8 @@ Ao tentar despromover um Domain Controller problemático, podemos receber o segu
 No meu caso, o DC em questão estava sendo despromovido por inúmeros erros de replicação, onde havia em meu ambiente outros 4 DC's. Sendo assim, decidi despromover o servidor problemático para depois promove-lo novamente.  
 
 
-Por inúmeros erros ocasionados pelo problema da replicação, não havia mais comunicação com o DC mestre de operações fazendo com que o erro citado fosse exibido. Realizei várias tentativas de tentar reparar a replicação, seja via ***dcdiag***, seja via outros caminhos que não citarei neste post, pois é um assunto mais extenso e cabe um melhor detalhamento em uma publicação mais informativa.  
+Por inúmeros erros ocasionados pelo problema da replicação, não havia mais comunicação com o DC mestre de operações fazendo com que o erro citado fosse exibido.
+ Realizei várias tentativas de tentar reparar a replicação, seja via ***dcdiag***, seja via outros caminhos que não citarei neste post, pois é um assunto mais extenso e cabe um melhor detalhamento em uma publicação mais informativa.  
 
 
 Então, após algumas pesquisas e estudos, decidi fazer o seguinte: parar o serviço ***KDC*** e realizar uma nova tentativa de despromoção.
@@ -59,9 +60,10 @@ Dê o comando:
 ```dcpromo```
 
 
-Marque a caixa para "forçar" a despromoçãoe siga conforme as etapas.
+Marque a caixa para "forçar" a despromoção
+e siga conforme as etapas.
 
 
-
+blog.brunocosta.dev
 Após a despromoção, como a mesma foi de maneira forçada, há a necessidade de limpar os metadados existentes nos demais DC's da rede (caso existam outros).
 Veja como fazer em [Limpar metadados do Active Directory](https://brunocosta.dev/limpar-metadados-do-active-directory/).
