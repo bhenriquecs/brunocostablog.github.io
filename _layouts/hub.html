@@ -4,21 +4,49 @@ layout: main
 <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 <script src="/assets/js/bootstrap.bundle.min"></script>
 
-<section class="hero" style="background-image: url({{ featured.image }})">
+<section class="hero">
     <div class="pixels"></div>
     <div class="gradient"></div>
     <div class="content">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-3">
+                    <a
+                        tabindex="0" 
+                        data-bs-html="true" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="top"
+                        data-bs-trigger="focus"
+                        title="Resumo" 
+                        data-bs-content="Teste">
+                        <img src="https://res.cloudinary.com/k4bv734/image/upload/v1684517562/info_ez4slg.png" class="img-thumbnail"/>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a
+                        tabindex="0" 
+                        data-bs-html="true" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="top"
+                        data-bs-trigger="focus"
+                        title="Blog" 
+                        data-bs-content="Teste">
+                        <img src="https://res.cloudinary.com/k4bv734/image/upload/v1684516770/blog_hsuvqe.png" class="img-thumbnail"/>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a
+                        tabindex="0" 
+                        data-bs-html="true" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="top"
+                        data-bs-trigger="focus"
+                        title="LinkedIn" 
+                        data-bs-content="Teste">
+                        <img src="https://res.cloudinary.com/k4bv734/image/upload/v1684516770/linkedin_zui6n9.png" class="img-thumbnail"/>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
