@@ -1,27 +1,67 @@
 ---
 layout: page
 ---
-<!--
-<style type="text/css" media="screen">
-  .container {
-    margin: 0px auto;
-    max-width: 600px;
-  }
-</style>
--->
-<div class="container">
-    <section class="hero">
-        <div class="pixels"></div>
-        <div class="gradient"></div>
-    </section>
-</div>
+<style>
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
 
-<script type="text/javascript">
-    function adjust_textarea(h) {
-        h.style.height = "200px";
-        h.style.height = (h.scrollHeight)+"px";
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card.large {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    /* Ajuste para telas menores que 768px */
+    .grid-container {
+    grid-template-columns: 1fr 1fr;
     }
-</script>
+    
+    .card.large {
+    grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajuste para telas menores que 480px */
+    .grid-container {
+    grid-template-columns: 1fr;
+    }
+
+    .card.large {
+    grid-column: span 1;
+    }
+}
+</style>
+<div class="container">
+    <div class="grid-container">
+        <div class="card large">
+          <!-- Conteúdo do card maior -->
+        </div>
+        <div class="card">
+          <!-- Conteúdo do card menor 1 -->
+        </div>
+        <div class="card">
+          <!-- Conteúdo do card menor 2 -->
+        </div>
+        <div class="card">
+          <!-- Conteúdo do card 3 -->
+        </div>
+        <div class="card">
+          <!-- Conteúdo do card 4 -->
+        </div>
+        <div class="card">
+          <!-- Conteúdo do card 5 -->
+        </div>
+    </div>
+</div>
 
 <!--
 <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
