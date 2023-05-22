@@ -12,22 +12,32 @@ layout: page
   }
 </style>
 
-<div class="container">
+<div class="container" style="max-width: 900px;">
+  {% assign cards_per_row = 3 %}
+  {% assign total_cards = 9 %}
+  {% assign rows = total_cards | divided_by: cards_per_row %}
+  {% assign remaining_cards = total_cards | modulo: cards_per_row %}
+  
+  {% for row in (1..rows) %}
   <div class="row">
+    {% for card in (1..cards_per_row) %}
     <div class="col-md-4">
-      <div class="card">
-        <h5 class="card-title">Teste</h5>
-      </div>
+      {% capture card_number %}{{ (row - 1) * cards_per_row + card }}{% endcapture %}
+      {% include card.html number=card_number %}
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <h5 class="card-title">Teste</h5>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <h5 class="card-title">Teste</h5>
-      </div>
-    </div>
+    {% endfor %}
   </div>
+  {% endfor %}
+  
+  {% if remaining_cards > 0 %}
+  <div class="row">
+    {% for card in (1..remaining_cards) %}
+    <div class="col-md-4">
+      {% capture card_number %}{{ rows * cards_per_row + card }}{% endcapture %}
+      {% include card.html number=card_number %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
 </div>
+
