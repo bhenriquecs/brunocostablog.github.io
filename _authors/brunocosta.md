@@ -1,6 +1,6 @@
 ---
 layout: author
-photo: /assets/img/uploads/profile.png
+photo: /assets/img/uploads/bruno_perfil_semfundo1.jpg
 name: brunocosta
 display_name: Bruno Costa
 position: ""
