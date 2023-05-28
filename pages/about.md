@@ -6,7 +6,7 @@ title: Sobre
 permalink: /about/
 description: Sobre o autor.
 ---
-<img class="img-rounded" src="/assets/img/uploads/profile.png" alt="Bruno Costa" width="200">
+<img class="img-rounded" src="/assets/img/uploads/profile1.png" alt="Bruno Costa" width="200">
 
 # Sobre o autor
 
