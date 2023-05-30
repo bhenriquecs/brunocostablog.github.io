@@ -15,8 +15,8 @@ show_hero: true
 menu:
   - title: Home
     url: /
-  - title: Hub
-    url: /hub
+  - title: Blog
+    url: /blog
   - title: Sobre
     url: /about
   - title: Contato
