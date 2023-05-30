@@ -12,6 +12,27 @@ layout: page_hub
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Bruno Costa</title>
     <style>
+        .stretched-link {
+            position: relative;
+            display: inline-block;
+        }
+
+        .stretched-link::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .stretched-link:hover::before {
+            opacity: 1;
+        }
+
         .post-content img {
             max-width: 100%;
             margin: 0rem auto;
@@ -66,27 +87,35 @@ layout: page_hub
             </div>
             <div class="card bg-dark">
                 <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1685407861/blog_lswaau.png" alt="Blog">
+                <a href="https://brunocosta.dev/blog/" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card bg-dark">
                 <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1685407861/email_ewfhbh.png" alt="E-mail">
+                <a href="https://brunocosta.dev/contact/" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card bg-dark">
                 <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1685407861/googleplaystore_wffqia.png" alt="Segurança Online">
+                <a href="https://play.google.com/store/apps/" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card bg-dark">
                 <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1685409161/taskpro_nunayq.png" alt="TaskPro">
+                <a href="#" class="stretched-link"></a>
             </div>
             <div class="card bg-dark">
                 <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1685409161/linkedin_kwirc9.png" alt="LinkedIn">
+                <a href="https://www.linkedin.com/in/bruno-h-costa-santos" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card bg-dark">
                 <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1685409162/github_sk97s1.png" alt="GitHub">
+                <a href="https://github.com/bhenriquecs" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card bg-dark">
                 <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1685407861/googleplaystore_wffqia.png" alt="To-Do">
+                <a href="https://play.google.com/store/apps/" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card bg-dark">
                 <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1685409161/feedrss_ni9kca.png" alt="Feed RSS">
+                <a href="https://brunocosta.dev/feed.xml" class="stretched-link" target="_blank"></a>
             </div>
         </div>
       </div>
