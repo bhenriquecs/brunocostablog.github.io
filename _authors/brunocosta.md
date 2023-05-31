@@ -4,9 +4,9 @@ photo: /assets/img/uploads/bruno_perfil_semfundo1.jpg
 name: brunocosta
 display_name: Bruno Costa
 position: ""
-bio: Graduado em análise e desenvolvimento de sistemas, pós-graduando em
-  cibersegurança e governança de dados, possuo experiência em desenvolvimento,
-  infraestrutura e sysadmim. Atuação em projetos que envolvem tecnologia e
+bio: Autodidata, graduado em análise e desenvolvimento de sistemas, pós-graduando em
+  cibersegurança e governança de dados. Possuo experiência em desenvolvimento,
+  infraestrutura e segurança da informação. Atuação em projetos que envolvem tecnologia e
   coordenação de equipes.
 github_username: bhenriquecs
 facebook_username: null
