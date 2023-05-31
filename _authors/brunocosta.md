@@ -6,7 +6,7 @@ display_name: Bruno Costa
 position: ""
 bio: Autodidata, graduado em análise e desenvolvimento de sistemas, pós-graduando em
   cibersegurança e governança de dados. Possuo experiência em desenvolvimento,
-  infraestrutura e segurança da informação. Atuação em projetos que envolvem tecnologia e
+  infraestrutura e cibersegurança. Atuação em projetos que envolvem tecnologia e
   coordenação de equipes.
 github_username: bhenriquecs
 facebook_username: null
