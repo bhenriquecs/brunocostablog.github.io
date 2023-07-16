@@ -38,11 +38,11 @@ Além de criar consultas maliciosas e avaliar a resposta, os firewalls também p
 
 A seguir estão três métodos automatizados de detecção e identificação de WAFs.
 
-1. Executando uma varredura Nmap
+**1. Executando uma varredura Nmap**
 
 A Engine de Scripts do Nmap (NSE) inclui scripts para detectar e identificar firewalls. Exemplo de uso:
 
-```
+~~~
 $ nmap --script=http-waf-fingerprint,http-waf-detect -p443 example.com
 Starting Nmap 7.93 (https://nmap.org) at 2023-05-29 21:43 PDT
 Nmap scan report for example.com (xxx.xxx.xxx.xxx)
@@ -54,19 +54,18 @@ PORT    STATE SERVICE
 |_example.com:443/?p4yl04d3=<script>alert(document.cookie)</script>
 
 Nmap done: 1 IP address (1 host up) scanned in 8.81 seconds
-```
-
-2. WhatWaf
+~~~
+**2. WhatWaf**
 
 Além de detectar um firewall, o WhatWaf pode tentar descobrir uma forma de contorná-lo usando scripts de adulteração e avaliando a resposta do servidor da web às várias cargas úteis.
 
-3. WafW00f
+**3. WafW00f**
 
 O Wafw00f é uma ferramenta de linha de comando que envia cargas úteis comumente identificadas para o nome de domínio fornecido e avalia a resposta do servidor da web para detectar e identificar o firewall, quando possível. Exemplo de uso:
-
-```
+~~~
 $ wafw00f example.com
-```
+~~~
+
 
 Os resultados do Wafw00f são consistentes como os do WhatWaf.
 
