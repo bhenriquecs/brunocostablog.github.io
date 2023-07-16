@@ -22,7 +22,7 @@ Dependendo dos mecanismos usados pelo firewall, os métodos de bypass podem vari
 
 Agora vamos explorar algumas técnicas comuns de bypass do WAF juntamente com exemplos.
 
-1. **Ignorando o Regex**: Este método se aplica à filtragem baseada em regex feita pelo WAF e pelo servidor web. Durante um teste de penetração de caixa preta, pode ser difícil descobrir a expressão regular exata utilizada pelo WAF. No entanto, se a expressão regular for conhecida, é possível contorná-la usando algumas técnicas. Aqui estão alguns exemplos:
+1.**Ignorando o Regex**: Este método se aplica à filtragem baseada em regex feita pelo WAF e pelo servidor web. Durante um teste de penetração de caixa preta, pode ser difícil descobrir a expressão regular exata utilizada pelo WAF. No entanto, se a expressão regular for conhecida, é possível contorná-la usando algumas técnicas. Aqui estão alguns exemplos:
 
 - Alteração do caso da carga útil
 - Uso de várias codificações
@@ -32,7 +32,7 @@ Agora vamos explorar algumas técnicas comuns de bypass do WAF juntamente com ex
 
 Os exemplos abaixo demonstram algumas abordagens para contornar o regex com comentários.
 ```
-<sCrIpT>alert(XSS)</sCriPt> #alterando o caso da tag
+<sCrIpT>alert(XSS)</sCriPt> #alterando o case da tag
 << script>alert(XSS)</script > #prependendo um "<"
 <script>alert(XSS) adicional // #removendo o fechamento tag
 <script>alert`XSS`</script> #usando acentos graves em vez de parênteses
@@ -44,7 +44,7 @@ java%0ascript:alert(1) #usando caracteres de nova linha codificados
 ```
 
 
-2. **Ofuscação**: Embora a ofuscação seja uma maneira possível de ignorar o regex, eles foram divididos em diferentes seções para mostrar mais exclusivamente uma seleção de técnicas de ofuscação. A ofuscação é uma técnica utilizada para tornar o código malicioso mais difícil de ser detectado pelo WAF. Aqui estão alguns exemplos de técnicas de ofuscação:
+2.**Ofuscação**: Embora a ofuscação seja uma maneira possível de ignorar o regex, eles foram divididos em diferentes seções para mostrar mais exclusivamente uma seleção de técnicas de ofuscação. A ofuscação é uma técnica utilizada para tornar o código malicioso mais difícil de ser detectado pelo WAF. Aqui estão alguns exemplos de técnicas de ofuscação:
 
 - Uso de funções incomuns além de alert, console.log e prompt
 - Codificação octal
@@ -68,13 +68,13 @@ data:text/html; base64 ,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+ #base64 codificando o javas
 ```
 
 
-3. **Variáveis não inicializadas**: Uma técnica potencialmente útil envolve o uso de variáveis não inicializadas na solicitação. Isso pode ser especialmente útil em cenários de execução de comandos, onde o Bash trata variáveis não inicializadas como strings vazias. Ao concatenar strings vazias com uma carga útil de comando, é possível obter o resultado desejado. Isso pode ser usado como uma forma de ofuscação para contornar firewalls.
+3.**Variáveis não inicializadas**: Uma técnica potencialmente útil envolve o uso de variáveis não inicializadas na solicitação. Isso pode ser especialmente útil em cenários de execução de comandos, onde o Bash trata variáveis não inicializadas como strings vazias. Ao concatenar strings vazias com uma carga útil de comando, é possível obter o resultado desejado. Isso pode ser usado como uma forma de ofuscação para contornar firewalls.
 
 
 
-4. **Tamanho do conteúdo**: Alguns WAFs baseados em nuvem podem não verificar uma solicitação se o tamanho do conteúdo exceder um limite específico. Nesses casos, é possível contornar o firewall aumentando o tamanho do corpo da solicitação ou da URL.
+4.**Tamanho do conteúdo**: Alguns WAFs baseados em nuvem podem não verificar uma solicitação se o tamanho do conteúdo exceder um limite específico. Nesses casos, é possível contornar o firewall aumentando o tamanho do corpo da solicitação ou da URL.
 
-5. **Conjunto de caracteres**: Essa técnica envolve a modificação do cabeçalho Content-Type para usar um conjunto de caracteres diferente, como por exemplo "ibm500". Um WAF que não está configurado para detectar cargas maliciosas em diferentes codificações pode não reconhecer a solicitação como maliciosa. A codificação do conjunto de caracteres pode ser feita em Python da seguinte maneira:
+5.**Conjunto de caracteres**: Essa técnica envolve a modificação do cabeçalho Content-Type para usar um conjunto de caracteres diferente, como por exemplo "ibm500". Um WAF que não está configurado para detectar cargas maliciosas em diferentes codificações pode não reconhecer a solicitação como maliciosa. A codificação do conjunto de caracteres pode ser feita em Python da seguinte maneira:
 
 ~~~python
 $ python3
