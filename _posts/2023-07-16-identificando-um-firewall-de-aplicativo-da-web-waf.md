@@ -38,7 +38,7 @@ Além de criar consultas maliciosas e avaliar a resposta, os firewalls também p
 
 A seguir estão três métodos automatizados de detecção e identificação de WAFs.
 
-**1. Executando uma varredura Nmap**
+**1. Executando uma varredura Nmap**
 
 A Engine de Scripts do Nmap (NSE) inclui scripts para detectar e identificar firewalls. Exemplo de uso:
 
