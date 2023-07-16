@@ -17,7 +17,7 @@ paginate: false
 ---
 A seguir,  as principais portas que precisam ser abertas para permitir a comunicação e replicação entre controladores de domínio em locais diferentes via VPN. No entanto, dependendo da configuração do seu ambiente e dos serviços adicionais que você estiver utilizando, pode ser necessário abrir outras portas específicas. Certifique-se de revisar a documentação do seu fornecedor de firewall ou consultar o suporte técnico para obter informações detalhadas sobre as portas necessárias para o seu caso.
 
-Para garantir a replicação adequada entre controladores de domínio em locais diferentes conectados via VPN, é necessário abrir as seguintes portas no firewall:
+Para garantir a replicação adequada entre controladores de domínio em locais diferentes conectados via VPN, é necessário abrir, basicamente, as seguintes portas no firewall:
 
 - **TCP/UDP 389**: Essa porta é usada para a replicação de diretórios do Active Directory e permite a comunicação através do protocolo LDAP (Lightweight Directory Access Protocol) entre os controladores de domínio.
 
