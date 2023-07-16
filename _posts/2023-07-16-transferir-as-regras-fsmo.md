@@ -5,7 +5,7 @@ title: Transferir as regras FSMO
 description: Transferir as regras FSMO
 image: https://res.cloudinary.com/k4bv734/image/upload/v1689528618/fsmo_levdey.jpg
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1689528618/fsmo_optimized_mxtofk.jpg
-category: windows
+category: servidores
 tags:
   - windowsserver
   - fsmo
