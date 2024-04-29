@@ -4,7 +4,7 @@ photo: /assets/img/uploads/bruno_perfil_semfundo1.jpg
 name: brunocosta
 display_name: Bruno Costa
 position: ""
-bio: Autodidata, graduado em análise e desenvolvimento de sistemas, pós-graduando em
+bio: Autodidata, graduado em análise e desenvolvimento de sistemas, pós-graduado em
   cibersegurança e governança de dados. Possuo experiência em desenvolvimento,
   infraestrutura e cibersegurança. Atuação em projetos que envolvem tecnologia e
   coordenação de equipes.
