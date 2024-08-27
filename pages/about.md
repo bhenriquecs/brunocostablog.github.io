@@ -10,7 +10,7 @@ description: Sobre o autor.
 
 # Sobre o autor
 
-Autodidata, graduado em análise e desenvolvimento de sistemas, pós-graduado em cibersegurança e governança de dados. Possuo experiência em desenvolvimento, infraestrutura e cibersegurança. Atuação em projetos que envolvem tecnologia e coordenação de equipes.
+Autodidata, pós-graduado especialista em Cibersegurança e Governança de Dados pela PUC Minas e graduado em Análise e Desenvolvimento de Sistemas pela Anhanguera-Pitágoras. Experiência em gestão de infraestrutura de TI, segurança da informação, cibersegurança, desenvolvimento de sistemas e coordenação de equipes.
 
 Este blog tem como foco compartilhar conhecimento para quem o encontre em suas pesquisas. Aqui terão posts sobre sistemas, desenvolvimento, infraestrutura, devops e demais assuntos relacionados a Tecnologia da Informação aos quais tive, tenho e terei contato ao longo da minha jornada.  
 
