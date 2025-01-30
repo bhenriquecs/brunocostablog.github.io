@@ -19,58 +19,31 @@ layout: page_hub
             background: #141414; /* Cor de fundo */
             color: #fff;
             font-family: 'Arial', sans-serif; /* Fonte padrão */
-            overflow: hidden; /* Evitar rolagem */
         }
 
         .container {
-            perspective: 1000px; /* Para o efeito de flip */
+            margin-top: 50px; /* Espaçamento superior */
         }
 
         .card {
-            width: 300px;
-            height: 400px;
-            margin: 20px;
-            position: relative;
-            transform-style: preserve-3d; /* Para o efeito de flip */
-            transition: transform 0.6s; /* Transição suave */
+            border: none;
+            border-radius: 10px;
+            background-color: #007bff; /* Cor dos cartões */
+            transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .card:hover {
-            transform: rotateY(180deg); /* Efeito de flip ao passar o mouse */
-        }
-
-        .card-inner {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden; /* Esconder o verso */
-        }
-
-        .card-front, .card-back {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .card-front {
-            background-color: #007bff; /* Cor do cartão */
-        }
-
-        .card-back {
-            background-color: #0056b3; /* Cor do verso do cartão */
-            color: #fff;
-            transform: rotateY(180deg); /* Iniciar virado */
+            background-color: #0056b3; /* Cor ao passar o mouse */
+            transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
         }
 
         .card img {
-            max-width: 80%;
-            border-radius: 15px 15px 0 0;
+            border-radius: 10px 10px 0 0; /* Bordas arredondadas na parte superior */
         }
 
         .card-title {
-            font-size: 1.5rem;
+            font-size: 1.25rem; /* Tamanho da fonte do título */
             margin: 10px 0;
         }
 
@@ -91,91 +64,59 @@ layout: page_hub
     <div class="container">
         <div class="card-columns">
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484729/Hub%20Blog/Curriculo_yknjit.png" alt="Curriculum">
-                        <h5 class="card-title">Currículo</h5>
-                    </div>
-                    <div class="card-back">
-                        <a href="http://lattes.cnpq.br/2120686762732136" class="stretched-link" target="_blank">Ver Currículo</a>
-                    </div>
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484729/Hub%20Blog/Curriculo_yknjit.png" alt="Curriculum">
+                <div class="card-body">
+                    <h5 class="card-title">Currículo</h5>
+                    <a href="http://lattes.cnpq.br/2120686762732136" class="btn btn-light" target="_blank">Ver Currículo</a>
                 </div>
             </div>
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484504/Hub%20Blog/LinkedIn_y4zqpk.png" alt="LinkedIn">
-                        <h5 class="card-title">LinkedIn</h5>
-                    </div>
-                    <div class="card-back">
-                        <a href="https://www.linkedin.com/in/bruno-h-costa-santos" class="stretched-link" target="_blank">Ver LinkedIn</a>
-                    </div>
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484504/Hub%20Blog/LinkedIn_y4zqpk.png" alt="LinkedIn">
+                <div class="card-body">
+                    <h5 class="card-title">LinkedIn</h5>
+                    <a href="https://www.linkedin.com/in/bruno-h-costa-santos" class="btn btn-light" target="_blank">Ver LinkedIn</a>
                 </div>
             </div>
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1714417943/Hub%20Blog/MeuFinanceiro_h8asma.png" alt="Meu Financeiro">
-                        <h5 class="card-title">Meu Financeiro</h5>
-                    </div>
-                    <div class="card-back">
-                        <a href="https://meufinanceiro.app/" class="stretched-link" target="_blank">Ver Meu Financeiro</a>
-                    </div>
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1714417943/Hub%20Blog/MeuFinanceiro_h8asma.png" alt="Meu Financeiro">
+                <div class="card-body">
+                    <h5 class="card-title">Meu Financeiro</h5>
+                    <a href="https://meufinanceiro.app/" class="btn btn-light" target="_blank">Ver Meu Financeiro</a>
                 </div>
             </div>
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484501/Hub%20Blog/E-mail_mkosvt.png" alt="E-mail">
-                        <h5 class="card-title">E-mail</h5>
-                    </div>
-                    <div class="card-back">
-                        <a href="https://brunocosta.dev/contact/" class="stretched-link" target="_blank">Ver E-mail</a>
-                    </div>
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484501/Hub%20Blog/E-mail_mkosvt.png" alt="E-mail">
+                <div class="card-body">
+                    <h5 class="card-title">E-mail</h5>
+                    <a href="https://brunocosta.dev/contact/" class="btn btn-light" target="_blank">Ver E-mail</a>
                 </div>
             </div>
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484505/Hub%20Blog/Blog_iblfxn.png" alt="Blog">
-                        <h5 class="card-title">Blog</h5>
-                    </div>
-                    <div class="card-back">
-                        <a href="https://brunocosta.dev/blog/" class="stretched-link" target="_blank">Ver Blog</a>
-                    </div>
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484505/Hub%20Blog/Blog_iblfxn.png" alt="Blog">
+                <div class="card-body">
+                    <h5 class="card-title">Blog</h5>
+                    <a href="https://brunocosta.dev/blog/" class="btn btn-light" target="_blank">Ver Blog</a>
                 </div>
             </div>
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484503/Hub%20Blog/Github_nkpacg.png" alt="GitHub">
-                        <h5 class="card-title">GitHub</h5>
-                    </div>
-                    <div class="card-back">
-                        <a href="https://github.com/bhenriquecs" class="stretched-link" target="_blank">Ver GitHub</a>
-                    </div>
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484503/Hub%20Blog/Github_nkpacg.png" alt="GitHub">
+                <div class="card-body">
+                    <h5 class="card-title">GitHub</h5>
+                    <a href="https://github.com/bhenriquecs" class="btn btn-light" target="_blank">Ver GitHub</a>
                 </div>
             </div>
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484501/Hub%20Blog/TaskPro_a9fdzr.png" alt="TaskPro">
-                        <h5 class="card-title">TaskPro</h5>
-                    </div>
-                    <div class="card-back">
-                        <a href="https://taskpro.com.br/" class="stretched-link" target="_blank">Ver TaskPro</a>
-                    </div>
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484501/Hub%20Blog/TaskPro_a9fdzr.png" alt="TaskPro">
+                <div class="card-body">
+                    <h5 class="card-title">TaskPro</h5>
+                    <a href="https://taskpro.com.br/" class="btn btn-light" target="_blank">Ver TaskPro</a>
                 </div>
             </div>
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484503/Hub%20Blog/FeedRSS_qrbzsg.png" alt="Feed RSS">
-                        <h5 class="card-title">Feed RSS</h5>
-                    </div>
-                    <div class="card-back">
-                        <a href="https://brunocosta.dev/feed.xml" class="stretched-link" target="_blank">Ver Feed RSS</a>
-                    </div>
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484503/Hub%20Blog/FeedRSS_qrbzsg.png" alt="Feed RSS">
+                <div class="card-body">
+                    <h5 class="card-title">Feed RSS</h5>
+                    <a href="https://brunocosta.dev/feed.xml" class="btn btn-light" target="_blank">Ver Feed RSS</a>
                 </div>
             </div>
         </div>
