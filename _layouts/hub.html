@@ -8,93 +8,87 @@ layout: page_hub
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Bruno Costa</title>
     <style>
-        .post-content img {
-            max-width: 100%;
-            margin: 0rem auto;
-            display: block;
-            padding: 10px 0;
+        body { margin: 0; }
+        canvas { display: block; position: absolute; top: 0; left: 0; }
+        .card-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 1; /* Para garantir que os cards fiquem acima do canvas */
         }
-
         .card {
+            background-color: #141414;
             border: none;
+            margin: 10px;
+            width: 150px;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            overflow: hidden;
         }
-
-        .bg-dark {
-            background-color: #141414!important;
-        }
-
-        img,
-        .card-img-top {
-            border-radius: 0;
-        }
-
-        @media (max-width: 768px) {
-            .card-columns {
-                column-count: 2;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .card-columns {
-                column-count: 2;
-            }
+        .card img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
         }
     </style>
-</head>
+  </head>
   <body>
-    <div class="container">
-        <div class="card-columns">
-            <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484729/Hub%20Blog/Curriculo_yknjit.png" alt="Curriculum">
-                <a href="http://lattes.cnpq.br/2120686762732136" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484504/Hub%20Blog/LinkedIn_y4zqpk.png" alt="LinkedIn">
-                <a href="https://www.linkedin.com/in/bruno-h-costa-santos" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1714417943/Hub%20Blog/MeuFinanceiro_h8asma.png" alt="Meu Financeiro">
-                <a href="https://meufinanceiro.app/" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484501/Hub%20Blog/E-mail_mkosvt.png" alt="E-mail">
-                <a href="https://brunocosta.dev/contact/" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484505/Hub%20Blog/Blog_iblfxn.png" alt="Blog">
-                <a href="https://brunocosta.dev/blog/" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484503/Hub%20Blog/Github_nkpacg.png" alt="GitHub">
-                <a href="https://github.com/bhenriquecs" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484501/Hub%20Blog/TaskPro_a9fdzr.png" alt="TaskPro">
-                <a href="https://taskpro.com.br/" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1706484503/Hub%20Blog/FeedRSS_qrbzsg.png" alt="Feed RSS">
-                <a href="https://brunocosta.dev/feed.xml" class="stretched-link" target="_blank"></a>
-            </div>
-        </div>
-      </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
-      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl)
-      })
-  
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-  </script>
+      // Configuração da cena
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      // Função de animação
+      function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+      }
+      animate();
+    </script>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="https://res.cloudinary.com/k4bv734/image/upload/v1706484729/Hub%20Blog/Curriculo_yknjit.png" alt="Curriculum">
+            <a href="http://lattes.cnpq.br/2120686762732136" target="_blank">Currículo</a>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/k4bv734/image/upload/v1706484504/Hub%20Blog/LinkedIn_y4zqpk.png" alt="LinkedIn">
+            <a href="https://www.linkedin.com/in/bruno-h-costa-santos" target="_blank">LinkedIn</a>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/k4bv734/image/upload/v1714417943/Hub%20Blog/MeuFinanceiro_h8asma.png" alt="Meu Financeiro">
+            <a href="https://meufinanceiro.app/" target="_blank">Meu Financeiro</a>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/k4bv734/image/upload/v1706484501/Hub%20Blog/E-mail_mkosvt.png" alt="E-mail">
+            <a href="https://brunocosta.dev/contact/" target="_blank">E-mail</a>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/k4bv734/image/upload/v1706484505/Hub%20Blog/Blog_iblfxn.png" alt="Blog">
+            <a href="https://brunocosta.dev/blog/" target="_blank">Blog</a>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/k4bv734/image/upload/v1706484503/Hub%20Blog/Github_nkpacg.png" alt="GitHub">
+            <a href="https://github.com/bhenriquecs" target="_blank">GitHub</a>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/k4bv734/image/upload/v1706484501/Hub%20Blog/TaskPro_a9fdzr.png" alt="TaskPro">
+            <a href="https://taskpro.com.br/" target="_blank">TaskPro</a>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/k4bv734/image/upload/v1706484503/Hub%20Blog/FeedRSS_qrbzsg.png" alt="Feed RSS">
+            <a href="https://brunocosta.dev/feed.xml" target="_blank">Feed RSS</a>
+        </div>
+    </div>
   </body>
 </html>
