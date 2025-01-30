@@ -23,11 +23,13 @@ layout: page_hub
             border: none;
             margin: 0; /* Remove gaps */
             padding: 0; /* Remove padding */
-            transition: transform 0.3s ease; /* Adiciona uma transição suave */
+            transition: transform 0.3s ease, z-index 0.3s ease; /* Adiciona transição suave para z-index */
+            z-index: 1; /* Define z-index padrão */
         }
 
         .card:hover {
-            transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
+            transform: scale(1.1); /* Aumenta o tamanho do card ao passar o mouse */
+            z-index: 10; /* Eleva o card acima dos outros ao passar o mouse */
         }
 
         .bg-dark {
