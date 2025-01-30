@@ -16,12 +16,18 @@ layout: page_hub
             max-width: 100%;
             margin: 0rem auto;
             display: block;
+            padding: 0;
         }
 
         .card {
             border: none;
             margin: 0; /* Remove gaps */
             padding: 0; /* Remove padding */
+            transition: transform 0.3s ease; /* Adiciona uma transição suave */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
         }
 
         .bg-dark {
@@ -86,7 +92,7 @@ layout: page_hub
             </div>
             <!-- Taskpro -->
             <div class="card bg-dark">
-                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1738259358/Hub%20Blog/Taskpro_7swpab_ewr9wq.png" alt="Taskpro">
+                <img class="card-img-top" src="https://res.cloudinary.com/k4bv734/image/upload/v1738261166/Hub%20Blog/Taskpro_7dje33.png" alt="Taskpro">
                 <a href="https://taskpro.com.br/" class="stretched-link" target="_blank"></a>
             </div>
             <!-- RSS -->
