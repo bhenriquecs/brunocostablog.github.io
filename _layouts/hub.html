@@ -21,6 +21,7 @@ layout: page_hub
 
         .card {
             border: none;
+            margin: 0; /* Remove gaps */
         }
 
         .bg-dark {
@@ -32,15 +33,19 @@ layout: page_hub
             border-radius: 0;
         }
 
-        @media (max-width: 768px) {
-            .card-columns {
-                column-count: 2;
-            }
+        .card-columns {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os cartões se movam para a próxima linha */
         }
 
-        @media (min-width: 769px) {
-            .card-columns {
-                column-count: 2;
+        .card {
+            flex: 1 0 21%; /* Ajusta a largura dos cartões */
+            margin: 0; /* Remove gaps */
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 0 100%; /* Cartões ocupam 100% da largura em telas menores */
             }
         }
     </style>
