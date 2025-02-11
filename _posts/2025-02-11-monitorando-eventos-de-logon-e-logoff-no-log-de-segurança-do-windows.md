@@ -1,5 +1,5 @@
 ---
-date: 2025-02-11 16:50:13
+date: 2025-01-07 16:50:13
 layout: post
 title: Monitorando Eventos de Logon e Logoff no Log de Segurança do Windows
 description: Com a crescente sofisticação das ameaças cibernéticas, torna-se
