@@ -1,12 +1,15 @@
 ---
-date: 2025-01-07 16:50:13
+date: 2024-07-07 09:00:13
 layout: post
 title: Monitorando Eventos de Logon e Logoff no Log de Segurança do Windows
+subtitle: ""
 description: Com a crescente sofisticação das ameaças cibernéticas, torna-se
   essencial implementar mecanismos eficazes de monitoramento e controle de
   acessos. Neste post, abordamos como os eventos de Logon e Logoff no Log de
   Segurança do Windows (conhecido também como Visualizador de Eventos ou Windows
   Security Log), desempenham um papel crucial nesse processo.
+image: https://res.cloudinary.com/k4bv734/image/upload/v1739403114/blog/monitorando_eventos_de_logon_e_logoff_optimized_c5rng3.jpg
+optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1739403114/blog/monitorando_eventos_de_logon_e_logoff_optimized_c5rng3.jpg
 category: servidores
 tags:
   - servidores
