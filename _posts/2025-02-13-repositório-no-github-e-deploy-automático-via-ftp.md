@@ -2,11 +2,7 @@
 date: 2025-01-07 20:58:00
 layout: post
 title: Repositório no GitHub e deploy automático via FTP
-description: Essa automação é útil para desenvolvedores e empresas que utilizam
-  VPS e/ou hospedagens compartilhadas para hospedar seus projetos. É ideal para
-  quem quer automatizar o processo de deploy, evitando o envio manual de
-  arquivos via FTP, garantindo rapidez, consistência e menos erros no lançamento
-  de atualizações.
+description: Automatizando o deploy utilizando GitHub Actions.
 image: https://res.cloudinary.com/k4bv734/image/upload/v1739403114/blog/github-deploy-ftp_au6kal.png
 optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1739403113/blog/github-deploy-ftp_optimized_adr00z.png
 category: desenvolvimento
