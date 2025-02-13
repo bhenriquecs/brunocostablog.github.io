@@ -1,5 +1,5 @@
 ---
-date: 2025-02-12 22:27:18
+date: 2025-02-12 22:00:18
 layout: post
 title: Criando um "chatGPT" em sua máquina local
 description: Criando o seu próprio chat com IA local e privado
