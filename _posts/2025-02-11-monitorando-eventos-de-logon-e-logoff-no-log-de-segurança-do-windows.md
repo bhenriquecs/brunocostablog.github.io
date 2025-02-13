@@ -1,7 +1,7 @@
 ---
 date: 2024-07-07 09:00:13
 layout: post
-title: Monitorando Eventos de Logon e Logoff no Log de Segurança do Windows
+title: Eventos de logon e logoff no Log de Segurança do Windows
 subtitle: ""
 description: Com a crescente sofisticação das ameaças cibernéticas, torna-se
   essencial implementar mecanismos eficazes de monitoramento e controle de
