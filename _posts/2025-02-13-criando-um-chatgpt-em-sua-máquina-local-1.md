@@ -3,8 +3,8 @@ date: 2025-02-12 23:40:44
 layout: post
 title: Criando um "chatGPT" em sua máquina local
 description: Criando o seu próprio chat com IA local e privado
-image: ""
-optimized_image: ""
+image: https://res.cloudinary.com/k4bv734/image/upload/v1739416872/blog/chat_ia_local_go3gwm.png
+optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1739416872/blog/chat_ia_local_optimized_t6b30w.png
 category: "{{slug}}"
 tags:
   - ia
