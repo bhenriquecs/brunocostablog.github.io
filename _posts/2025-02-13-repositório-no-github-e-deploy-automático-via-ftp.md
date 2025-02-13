@@ -7,7 +7,13 @@ description: Essa automação é útil para desenvolvedores e empresas que utili
   quem quer automatizar o processo de deploy, evitando o envio manual de
   arquivos via FTP, garantindo rapidez, consistência e menos erros no lançamento
   de atualizações.
+image: https://res.cloudinary.com/k4bv734/image/upload/v1739403114/blog/github-deploy-ftp_au6kal.png
+optimized_image: https://res.cloudinary.com/k4bv734/image/upload/v1739403113/blog/github-deploy-ftp_optimized_adr00z.png
 category: desenvolvimento
+tags:
+  - github
+  - ftp
+  - deploy
 author: brunocosta
 paginate: false
 ---
