@@ -73,7 +73,7 @@ jobs:
     steps:
       # Faz o checkout do código no repositório
       - name: Checkout do repositório
-      uses: actions/checkout@v3
+        uses: actions/checkout@v3
 			
       # Usa a ação FTP Deploy para enviar arquivos ao servidor
       - name: Deploy para FTP
@@ -87,40 +87,30 @@ jobs:
         server-dir: /path # Caminho no servidor FTP
 ```
 
-### Passo 3: Configurando os Secrets no GitHub ###
+### Passo 3: Configurando os Secrets no GitHub
 
 Para garantir a segurança das credenciais do FTP, utilizamos *Secrets* do GitHub. Siga os passos para configurá-los:
 
-
 **1.** Acesse o repositório no GitHub.
-
 
 **2.** Vá até Settings > Secrets and variables > Actions > New repository secret.
 
-
 **3.** Adicione os seguintes secrets:
-
 
 **FTP_USERNAME:** Seu nome de usuário FTP.
 
 **FTP_PASSWORD:** Sua senha FTP.
 
-### Passo 4: Testando o Workflow ###
-
+### Passo 4: Testando o Workflow
 
 Após configurar tudo, faça um commit e push no repositório para testar a automação. Utilize o Visual Studio + o Github Desktop ou o exemplo abaixo usando o terminal:
+
 ```
-
-
 git add .
 git commit -m "Configuração de deploy automático via FTP"
 git push origin main
 ```
 
-
-
 Agora, acesse a aba *Actions* no GitHub e verifique se o workflow foi executado corretamente.
-
-
 
 Com este processo, você terá um sistema automatizado que fará o deploy do seu projeto sempre que houver alterações no branch principal (ou no branch que informou no arquivo de workflow). Isso melhora a eficiência do desenvolvimento e reduz a necessidade de uploads manuais via FTP.
