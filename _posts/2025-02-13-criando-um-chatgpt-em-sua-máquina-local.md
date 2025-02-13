@@ -14,16 +14,30 @@ paginate: false
 ---
 ### Por que utilizar um "ChatGPT" local?
 
+
+
 * **Privacidade:** Leia os termos de uso e políticas de privacidade das soluções famosas disponíveis. Não é segredo que podem utilizar seus para treinamento da "IA". Se for utilizar com dados sensíveis o melhor caminho é ter seu chat local.
-  "Se você não paga pelo produto, você é o produto."
+
+>"Se você não paga pelo produto, você é o produto."
+
+
 * **Contenção de custos:** Se você realiza um alto volume de execuções, como um script que utiliza alguma LLM para funcionar, tem ciência (ou deveria ter) que essa brincadeira pode doer no bolso. Talvez, seja um excelente aliado ter seu modelo rodando localmente lhe economize um bom dinheiro.
+
+
 * **Indisponibilidade:** por não depender de conexão com a internet, indisponibilidades seja da operadora e/ou da solução não afetarão a sua execução. O chatGPT, por exemplo, já ficou indisponível por algumas vezes.
+
+
 
 ### O que será necessário
 
+
+
 Para executar modelos de IA localmente em sua máquina, com o mínimo de performance, você precisará de:
 
+
+
 * **Computador** (óbvio!), sendo:
+
 
 **Ideal:** com placa de vídeo offboard NVIDIA com no mínimo 12gb de VRAM
 Nota: NVIDIA por conta dos núcleos CUDA (assunto para um próximo post)
@@ -31,6 +45,7 @@ Nota: NVIDIA por conta dos núcleos CUDA (assunto para um próximo post)
 **Básico:** com processador Ryzen série 5 + 32gb de RAM
 
 * **Ollama:** ferramenta de código aberto que facilita e permite a execução de modelos de LLMs em computador local
+
 * **Terminal:** CMD (Windows), Terminal (Linux), etc.
 
 ##### OFF TOPIC: #####
@@ -65,16 +80,14 @@ Veja a tabela abaixo, considerando modelos LLaMA:
 
 **4.** Volte para ollama.com, clique em "Models" no menu e escolha um modelo. Minha sugestão é começar com o *llama3.2 (3b)* ou, o tão falado do momento, *deepseek-r1 (1.5b)*
 
-{% figure_url {"image": "https://res.cloudinary.com/k4bv734/image/upload/v1739412208/blog_content/ia_local_1_d1pfwz.png"} %}
 
-{% figure_url {"image": "https://res.cloudinary.com/k4bv734/image/upload/v1739412232/blog_content/ia_local_2_h3gotd.png"} %}
 
 **5.** Selecione o tamanho do modelo (no exemplo utilizarei o *deepseek-r1 1.5b*)  e copie o comando para instalação
 
 ```
 ollama run deepseek-r1:1.5b
 ```
-{% figure_url {"image": "https://res.cloudinary.com/k4bv734/image/upload/v1739412231/blog_content/ia_local_3_mk33oj.png"} %}
+
 
 **6.** Agora, abra o terminal. No caso do Windows abra o CMD;
 
@@ -87,5 +100,4 @@ b. Digite "CMD" e dê Enter
 **7.** No CMD, cole o comando copiado no passo 5 e dê Enter
 
 **8.** Após a finalização, já estará apto para utilizar o seu chat com IA particular.
-
-{% figure_url {"image": "https://res.cloudinary.com/k4bv734/image/upload/v1739412211/blog_content/ia_local_5_qxpqhm.png"} %}
+
