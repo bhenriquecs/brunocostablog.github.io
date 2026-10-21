@@ -11,7 +11,7 @@ description: "Nesta quarta-feira, 21 de outubro de 2026, foi publicada uma falha
   grave no PHP. PHP é o motor que faz funcionar uma parte enorme dos sites e
   sistemas na internet: sites institucionais, blogs, lojas virtuais, áreas do
   cliente, intranets e sistemas feitos sob medida."
-image: https://res.cloudinary.com/k4bv734/image/upload/v1792619988/blog/Vulnerabilidade_Cr%C3%ADtica_no_PHP_lnl59z.png
+image: https://res.cloudinary.com/k4bv734/image/upload/v1792621018/blog/Vulnerabilidade_Cr%C3%ADtica_no_PHP_v7yljk.png
 category: ciberseguranca
 tags:
   - php
